@@ -3,6 +3,7 @@ import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 
 export default function Post({ postData }) {
   return (
@@ -21,16 +22,16 @@ export default function Post({ postData }) {
   )
 }
 
-export async function getStaticPaths() {
-  const paths = getAllPostIds()
-  return {
-    paths,
-    fallback: false
-  }
-}
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const paths = getAllPostIds()
+//   return {
+//     paths,
+//     fallback: false
+//   }
+// }
 
-export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id)
+export const getServerSideProps: GetServerSideProps = async context => {
+  const postData = await getPostData(context.params.id)
   return {
     props: {
       postData
