@@ -1,12 +1,24 @@
 import Head from 'next/head'
-import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
+import { GetStaticProps } from 'next'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
+import { useState } from 'react'
+import "isomorphic-fetch"
+
 
 export default function Home({ allPostsData }) {
+  const [data, setData] = useState("");
+  const [error, setError] = useState("");
+  fetch("/api/hello")
+    .then(response => response.json()
+    )
+    .then(val => setData(val))
+    .catch(err => setError(err.message))
+  if (error) return <div>{error}</div>
+  if (!data) return <div>Loading...</div>
   return (
     <Layout home>
       <Head>
