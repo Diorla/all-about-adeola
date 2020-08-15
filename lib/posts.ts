@@ -6,6 +6,9 @@ import html from "remark-html";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
+/**
+ * The function loads all the .md files inside postsDirectory, reads each file to get the dates and then return the list, sorted based on the date
+ */
 export function getSortedPostsData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
@@ -41,6 +44,9 @@ export function getSortedPostsData() {
   });
 }
 
+/**
+ * Returns all the .md files inside postsDirectory
+ */
 export function getAllPostIds() {
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames.map((fileName) => {
@@ -52,6 +58,10 @@ export function getAllPostIds() {
   });
 }
 
+/**
+ * Reads and return the content of the file based
+ * @params id - The name of the markdown file without extension 
+ */
 export async function getPostData(id: string | string[]) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
