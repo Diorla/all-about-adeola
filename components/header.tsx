@@ -5,16 +5,16 @@ export default () => <div className="header">
   <Link href="/"><a className="logo">Adeola Ade</a></Link>
   <ul className="nav">
     <li>
-      <Link href="about"><a>About</a></Link>
+      <Link href="/about"><a>About</a></Link>
     </li>
     <li>
-      <Link href="blogs"><a>Articles</a></Link>
+      <Link href="/blogs"><a>Articles</a></Link>
     </li>
     <li>
-      <Link href="works"><a>Works</a></Link>
+      <Link href="/works"><a>Works</a></Link>
     </li>
     <li>
-      <Link href="resources"><a>Resources</a></Link>
+      <Link href="/resources"><a>Resources</a></Link>
     </li>
     <li className="highlight">
       <Link href="#contact"><a>Hire Me</a></Link>
@@ -38,7 +38,7 @@ export default () => <div className="header">
     .nav {
       list-style: none;
       display: flex;
-      margin: none;
+      align-items: center;
     }
     .nav li {
       margin: 4px;
@@ -48,7 +48,8 @@ export default () => <div className="header">
       color: black;
     }
     .logo {
-      font-family: cursive;
+      font-family: 'Oleo Script', cursive;
+      font-size: 24px;
     }
     .logo:hover {
       text-decoration: none;
@@ -57,6 +58,7 @@ export default () => <div className="header">
     .highlight {
       background: teal;
       border-radius: 4px;
+      text-align: center;
     }
     .highlight:hover {
       background: #009688;
