@@ -5,20 +5,10 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
-import { useState } from 'react'
-import "isomorphic-fetch"
 
+const addHash = (str: string) => `#${str.trim()} `
 
 export default function Home({ allPostsData }) {
-  const [data, setData] = useState("");
-  const [error, setError] = useState("");
-  fetch("/api/hello")
-    .then(response => response.json()
-    )
-    .then(val => setData(val))
-    .catch(err => setError(err.message))
-  if (error) return <div>{error}</div>
-  if (!data) return <div>Loading...</div>
   return (
     <Layout home>
       <Head>
@@ -34,7 +24,7 @@ export default function Home({ allPostsData }) {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
+          {allPostsData.map(({ id, date, title, tags }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href="/posts/[id]" as={`/posts/${id}`}>
                 <a>{title}</a>
@@ -43,6 +33,11 @@ export default function Home({ allPostsData }) {
               <small className={utilStyles.lightText}>
                 <Date dateString={date} />
               </small>
+              <div>
+                {
+                  tags.split(",").map(addHash).map((item: string, idx: string | number) => <span key={idx}>{item}</span>)
+                }
+              </div>
             </li>
           ))}
         </ul>
