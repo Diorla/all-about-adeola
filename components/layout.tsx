@@ -20,6 +20,7 @@ export default function Layout(props: { children: ReactNode, title?: string }) {
         <meta name="og:title" content={title} />
         <meta name="twitter:card" content="summary_large_image" />
         <title>{title}</title>
+        <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet" />
       </Head>
       <Header />
       <main>{children}</main>
