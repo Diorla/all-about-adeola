@@ -51,6 +51,8 @@ export default () => (
         list-style: none;
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
       }
       .nav li {
         margin: 4px;
