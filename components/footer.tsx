@@ -51,8 +51,11 @@ export default () => (
         flex: 1;
         justify-content: space-evenly;
       }
+      .copyright {
+        justify-content: center;
+      }
       .copyright span {
-        margin-right: 2px;
+        margin-right: 4px;
       }
     `}</style>
   </div>

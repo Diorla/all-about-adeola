@@ -1,52 +1,181 @@
-import Head from 'next/head'
-import { GetStaticProps } from 'next'
-import Layout from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
-import { getSortedPostsData } from '../lib/posts'
-import Link from 'next/link'
-import Date from '../components/date'
+import Layout from "../components/layout";
+import Carousel from "../components/carousel";
 
-const addHash = (str: string) => `#${str.trim()} `
-
-const apv = [];
-apv.length = 100;
-apv.fill("Hello darkness my old friend")
-export default function Home({ allPostsData }) {
+const commentary = [
+  {
+    name: "Ade Adeola",
+    image: "avatar.jpg",
+    comment:
+      "Aliqua nostrud adipisicing consequat in fugiat aliquip quis. Eu labore ullamco sit in minim nulla cupidatat.",
+    links: (
+      <div>
+        <a href="facebook" target="_blank" rel="noreferrer">
+          Facebook
+        </a>
+      </div>
+    ),
+  },
+  {
+    name: "Ade Adeola",
+    image: "avatar.jpg",
+    comment:
+      "Aliqua nostrud adipisicing consequat in fugiat aliquip quis. Eu labore ullamco sit in minim nulla cupidatat. Laborum nisi id elit fugiat nostrud ad veniam proident enim ut aute laboris eiusmod id. Aute excepteur duis elit aliquip ipsum et consectetur laboris amet ullamco duis velit do. Aute irure minim fugiat mollit culpa incididunt. Incididunt sint minim ullamco esse non eiusmod Lorem aliquip.",
+    links: (
+      <div>
+        <a href="facebook" target="_blank" rel="noreferrer">
+          Facebook
+        </a>
+      </div>
+    ),
+  },
+  {
+    name: "Ade Adeola",
+    image: "avatar.jpg",
+    comment:
+      "Aliqua nostrud adipisicing consequat in fugiat aliquip quis. Eu labore ullamco sit in minim nulla cupidatat. Laborum nisi id elit fugiat nostrud ad veniam proident enim ut aute laboris eiusmod id. Aute excepteur duis elit aliquip ipsum et consectetur laboris amet ullamco duis velit do.",
+    links: null,
+  },
+];
+export default function Home() {
   return (
     <Layout>
-      <section className="">
-        <h2 className="">Blog</h2>
-        <ul className="">
-          {allPostsData.map(({ id, date, title, tags }) => (
-            <li className="" key={id}>
-              <Link href="/posts/[id]" as={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small className="">
-                <Date dateString={date} />
-              </small>
-              <div>
-                {
-                  tags.split(",").map(addHash).map((item: string, idx: string | number) => <span key={idx}>{item}</span>)
-                }
-              </div>
-            </li>
-          ))}
-        </ul>
-        <div>{
-          apv.map((item, idx) => <div key={idx}>This is ${idx}</div>)}
+      <main>
+        <div className="landing section">
+          <div>Fullstack developer for all your web developing solutions</div>
         </div>
-      </section>
+        <div className="intro section">
+          <h2>How can I help you?</h2>
+          <div>
+            So this is brief introduction to who I am and what I can offer
+            prospective clients. Pariatur labore pariatur dolor ea eu qui.
+            Cillum sit Lorem anim eu irure cupidatat eu.
+          </div>
+          <div>
+            Tempor laboris amet ad esse amet sint reprehenderit anim. Aliquip
+            reprehenderit nisi fugiat elit et esse. Id officia aliquip consequat
+            officia voluptate in. Ullamco anim officia laboris sit aute nisi eu
+            exercitation culpa laborum adipisicing cillum eiusmod duis.
+          </div>
+        </div>
+        <div className="portfolio section">
+          {/*For websites, I should use links from the website as the logo*/}
+          <h2>Latest work</h2>
+          <div className="gallery">
+            <a
+              href="www.hera-ng.shopify.com"
+              title="hera women shopping"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="works/hera.png" alt="hera" />
+              <span>Hera shopping</span>
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1O_F9xEqDOe3QAX_NepnxXZyUs2DwdNt4/view?usp=sharing"
+              title="randomly generates character attributes"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="works/characters.png" alt="characters" />
+              <span>Character generator</span>
+            </a>
+            <a
+              href="www.weblinkio.app"
+              title="Save all your links"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="works/linker.png" alt="weblinkio" />
+              <span>Weblinkio</span>
+            </a>
+          </div>
+        </div>
+        <div className="testimony section">
+          <Carousel data={commentary} />
+        </div>
+        <div id="contact">
+          <div>
+            <img src="email.svg" alt="mail me" />
+          </div>
+          <div>
+            So you are interested in my service?{" "}
+            <a href="mailto:adeola@example.com">Send me an email</a> and I will
+            reply in less than 48 hours.
+          </div>
+        </div>
+      </main>
+      <style jsx>
+        {`
+          main {
+            background-color: #e0f2f1;
+            background-attachment: fixed;
+            background-color: #e0f2f1;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='192' viewBox='0 0 192 192'%3E%3Cpath fill='%23008080' fill-opacity='0.11' d='M192 15v2a11 11 0 0 0-11 11c0 1.94 1.16 4.75 2.53 6.11l2.36 2.36a6.93 6.93 0 0 1 1.22 7.56l-.43.84a8.08 8.08 0 0 1-6.66 4.13H145v35.02a6.1 6.1 0 0 0 3.03 4.87l.84.43c1.58.79 4 .4 5.24-.85l2.36-2.36a12.04 12.04 0 0 1 7.51-3.11 13 13 0 1 1 .02 26 12 12 0 0 1-7.53-3.11l-2.36-2.36a4.93 4.93 0 0 0-5.24-.85l-.84.43a6.1 6.1 0 0 0-3.03 4.87V143h35.02a8.08 8.08 0 0 1 6.66 4.13l.43.84a6.91 6.91 0 0 1-1.22 7.56l-2.36 2.36A10.06 10.06 0 0 0 181 164a11 11 0 0 0 11 11v2a13 13 0 0 1-13-13 12 12 0 0 1 3.11-7.53l2.36-2.36a4.93 4.93 0 0 0 .85-5.24l-.43-.84a6.1 6.1 0 0 0-4.87-3.03H145v35.02a8.08 8.08 0 0 1-4.13 6.66l-.84.43a6.91 6.91 0 0 1-7.56-1.22l-2.36-2.36A10.06 10.06 0 0 0 124 181a11 11 0 0 0-11 11h-2a13 13 0 0 1 13-13c2.47 0 5.79 1.37 7.53 3.11l2.36 2.36a4.94 4.94 0 0 0 5.24.85l.84-.43a6.1 6.1 0 0 0 3.03-4.87V145h-35.02a8.08 8.08 0 0 1-6.66-4.13l-.43-.84a6.91 6.91 0 0 1 1.22-7.56l2.36-2.36A10.06 10.06 0 0 0 107 124a11 11 0 0 0-22 0c0 1.94 1.16 4.75 2.53 6.11l2.36 2.36a6.93 6.93 0 0 1 1.22 7.56l-.43.84a8.08 8.08 0 0 1-6.66 4.13H49v35.02a6.1 6.1 0 0 0 3.03 4.87l.84.43c1.58.79 4 .4 5.24-.85l2.36-2.36a12.04 12.04 0 0 1 7.51-3.11A13 13 0 0 1 81 192h-2a11 11 0 0 0-11-11c-1.94 0-4.75 1.16-6.11 2.53l-2.36 2.36a6.93 6.93 0 0 1-7.56 1.22l-.84-.43a8.08 8.08 0 0 1-4.13-6.66V145H11.98a6.1 6.1 0 0 0-4.87 3.03l-.43.84c-.79 1.58-.4 4 .85 5.24l2.36 2.36a12.04 12.04 0 0 1 3.11 7.51A13 13 0 0 1 0 177v-2a11 11 0 0 0 11-11c0-1.94-1.16-4.75-2.53-6.11l-2.36-2.36a6.93 6.93 0 0 1-1.22-7.56l.43-.84a8.08 8.08 0 0 1 6.66-4.13H47v-35.02a6.1 6.1 0 0 0-3.03-4.87l-.84-.43c-1.59-.8-4-.4-5.24.85l-2.36 2.36A12 12 0 0 1 28 109a13 13 0 1 1 0-26c2.47 0 5.79 1.37 7.53 3.11l2.36 2.36a4.94 4.94 0 0 0 5.24.85l.84-.43A6.1 6.1 0 0 0 47 84.02V49H11.98a8.08 8.08 0 0 1-6.66-4.13l-.43-.84a6.91 6.91 0 0 1 1.22-7.56l2.36-2.36A10.06 10.06 0 0 0 11 28 11 11 0 0 0 0 17v-2a13 13 0 0 1 13 13c0 2.47-1.37 5.79-3.11 7.53l-2.36 2.36a4.94 4.94 0 0 0-.85 5.24l.43.84A6.1 6.1 0 0 0 11.98 47H47V11.98a8.08 8.08 0 0 1 4.13-6.66l.84-.43a6.91 6.91 0 0 1 7.56 1.22l2.36 2.36A10.06 10.06 0 0 0 68 11 11 11 0 0 0 79 0h2a13 13 0 0 1-13 13 12 12 0 0 1-7.53-3.11l-2.36-2.36a4.93 4.93 0 0 0-5.24-.85l-.84.43A6.1 6.1 0 0 0 49 11.98V47h35.02a8.08 8.08 0 0 1 6.66 4.13l.43.84a6.91 6.91 0 0 1-1.22 7.56l-2.36 2.36A10.06 10.06 0 0 0 85 68a11 11 0 0 0 22 0c0-1.94-1.16-4.75-2.53-6.11l-2.36-2.36a6.93 6.93 0 0 1-1.22-7.56l.43-.84a8.08 8.08 0 0 1 6.66-4.13H143V11.98a6.1 6.1 0 0 0-3.03-4.87l-.84-.43c-1.59-.8-4-.4-5.24.85l-2.36 2.36A12 12 0 0 1 124 13a13 13 0 0 1-13-13h2a11 11 0 0 0 11 11c1.94 0 4.75-1.16 6.11-2.53l2.36-2.36a6.93 6.93 0 0 1 7.56-1.22l.84.43a8.08 8.08 0 0 1 4.13 6.66V47h35.02a6.1 6.1 0 0 0 4.87-3.03l.43-.84c.8-1.59.4-4-.85-5.24l-2.36-2.36A12 12 0 0 1 179 28a13 13 0 0 1 13-13zM84.02 143a6.1 6.1 0 0 0 4.87-3.03l.43-.84c.8-1.59.4-4-.85-5.24l-2.36-2.36A12 12 0 0 1 83 124a13 13 0 1 1 26 0c0 2.47-1.37 5.79-3.11 7.53l-2.36 2.36a4.94 4.94 0 0 0-.85 5.24l.43.84a6.1 6.1 0 0 0 4.87 3.03H143v-35.02a8.08 8.08 0 0 1 4.13-6.66l.84-.43a6.91 6.91 0 0 1 7.56 1.22l2.36 2.36A10.06 10.06 0 0 0 164 107a11 11 0 0 0 0-22c-1.94 0-4.75 1.16-6.11 2.53l-2.36 2.36a6.93 6.93 0 0 1-7.56 1.22l-.84-.43a8.08 8.08 0 0 1-4.13-6.66V49h-35.02a6.1 6.1 0 0 0-4.87 3.03l-.43.84c-.79 1.58-.4 4 .85 5.24l2.36 2.36a12.04 12.04 0 0 1 3.11 7.51A13 13 0 1 1 83 68a12 12 0 0 1 3.11-7.53l2.36-2.36a4.93 4.93 0 0 0 .85-5.24l-.43-.84A6.1 6.1 0 0 0 84.02 49H49v35.02a8.08 8.08 0 0 1-4.13 6.66l-.84.43a6.91 6.91 0 0 1-7.56-1.22l-2.36-2.36A10.06 10.06 0 0 0 28 85a11 11 0 0 0 0 22c1.94 0 4.75-1.16 6.11-2.53l2.36-2.36a6.93 6.93 0 0 1 7.56-1.22l.84.43a8.08 8.08 0 0 1 4.13 6.66V143h35.02z'%3E%3C/path%3E%3C/svg%3E");
+          }
+          .section {
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 300px;
+            width: 100%;
+          }
+          .landing {
+            background-image: url(landing.svg);
+            background-size: 100% 100%;
+            background-color: #e0f2f1;
+            background-repeat: no-repeat;
+            font-family: helvetica;
+            display: flex;
+            align-items: flex-start;
+            background-position: right;
+            background-size: contain;
+            height: 60vh;
+          }
+          .landing div {
+            font-size: 24px;
+            color: teal;
+            padding: 8px;
+            background-color: rgba(255, 255, 255, 0.7);
+            max-width: 320px;
+            margin: 16px;
+            border-radius: 8px;
+          }
+          .intro {
+            display: flex;
+            flex-direction: column;
+            background-color: #e0f2f199;
+          }
+          h2 {
+            font-size: 28px;
+            max-width: 480px;
+            text-align: center;
+            margin: 24px 0 12px;
+          }
+          .intro div {
+            max-width: 720px;
+            text-align: justify;
+          }
+          .gallery {
+            justify-content: space-evenly;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+          }
+          img {
+            height: 50px;
+          }
+          .gallery a {
+            display: flex;
+            text-decoration: none;
+            align-items: center;
+          }
+          .gallery a:hover span {
+            opacity: 1;
+            transition: opacity 0.2s linear;
+          }
+        `}
+      </style>
     </Layout>
-  )
-}
-
-export const getStaticProps: GetStaticProps = async context => {
-  const allPostsData = getSortedPostsData()
-  return {
-    props: {
-      allPostsData
-    }
-  }
+  );
 }
