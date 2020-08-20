@@ -22,9 +22,13 @@ export default () => (
         Codepen
       </a>
     </div>
-    <div>&copy; {new Date().getFullYear()} Adeola Ade</div>
+    <div className="copyright">
+      <span>&copy; </span>
+      <span>{new Date().getFullYear()} </span>
+      <span>Adeola Ade</span>
+    </div>
     <div>
-      <a href="#top" id="goTop">
+      <a href="#top" onClick={() => window.scrollTo(0, 0)}>
         Top
       </a>
     </div>
@@ -34,8 +38,9 @@ export default () => (
         background: #333;
         color: white;
         justify-content: space-evenly;
-        height: 52px;
         align-items: center;
+        padding: 8px;
+        flex-wrap: wrap;
       }
       .footer a {
         color: white;
@@ -45,6 +50,9 @@ export default () => (
         display: flex;
         flex: 1;
         justify-content: space-evenly;
+      }
+      .copyright span {
+        margin-right: 2px;
       }
     `}</style>
   </div>
