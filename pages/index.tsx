@@ -1,5 +1,6 @@
 import Layout from "../components/layout";
 import Carousel from "../components/carousel";
+import Contact from "../components/contact";
 
 const commentary = [
   {
@@ -93,16 +94,7 @@ export default function Home() {
         <div className="testimony section">
           <Carousel data={commentary} />
         </div>
-        <div id="contact">
-          <div>
-            <img src="email.svg" alt="mail me" />
-          </div>
-          <div>
-            So you are interested in my service?{" "}
-            <a href="mailto:adeola@example.com">Send me an email</a> and I will
-            reply in less than 48 hours.
-          </div>
-        </div>
+        <Contact />
       </main>
       <style jsx>
         {`

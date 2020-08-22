@@ -149,30 +149,3 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
-#contact {
-  background: linear-gradient(180deg, white 40%, transparent);
-  margin-bottom: 32px;
-  display: flex;
-  align-items: center;
-  flex: 1;
-  padding: 8px;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-#contact > div {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 240px;
-}
-#contact > div:last-child {
-  min-width: 240px;
-  justify-content: center;
-}
-#contact img {
-  height: 100%;
-}
