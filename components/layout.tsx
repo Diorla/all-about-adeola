@@ -10,10 +10,7 @@ export default function Layout(props: { children: ReactNode; title?: string }) {
     <Container>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
+        <meta name="description" content="Welcome to Adeola Ade website." />
         <meta
           property="og:image"
           content={`https://og-image.now.sh/${encodeURI(
