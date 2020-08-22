@@ -32,6 +32,7 @@ export default () => (
         Top
       </a>
     </div>
+    <div>Made with love and React/Nextjs and hosted on Vercel</div>
     <style jsx>{`
       .footer {
         display: flex;

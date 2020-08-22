@@ -28,17 +28,13 @@ export default () => (
       </li>
       <li className="highlight">
         <Link href="#contact">
-          <a>Hire Me</a>
+          <a>Contact</a>
         </Link>
-        {/**On each page, there will a div#contact that will contain links to social(facebook, twitter, email) and a form so that user can contact me
-         * ON top of it, it will say  "Thank you for your interest!"
-         */}
       </li>
     </ul>
     <style jsx>{`
       .header {
         display: flex;
-        flex: 1;
         justify-content: space-between;
         padding: 8px;
         align-items: center;
