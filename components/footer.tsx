@@ -1,62 +1,54 @@
+import { CodepenIcon, LinkedinIcon, TwitterIcon, GithubIcon } from "./icon";
 export default () => (
   <div className="footer">
-    <div className="links">
-      <a
+    <div className="top">
+      <div>
+        <span>&copy; </span>
+        <span>{new Date().getFullYear()} </span>
+        <span>Adeola Ade</span>
+      </div>
+      <div>
+        <a href="#top">Top</a>
+      </div>
+    </div>
+    <div className="middle">
+      <TwitterIcon
         href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fwww.adeolaade.com%2Fabout%2F&ref_src=twsrc%5Etfw&region=follow_link&screen_name=dihorla&tw_p=followbutton"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Twitter
-      </a>
-      <a
-        href="https://www.linkedin.com/in/ade-adeola"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Linkedin
-      </a>
-      <a href="gt" target="_blank" rel="noreferrer">
-        github
-      </a>
-      <a href="https://codepen.io/Diorla/" target="_blank" rel="noreferrer">
-        Codepen
-      </a>
+        title="follow me"
+      />
+      <LinkedinIcon href="https://www.linkedin.com/in/ade-adeola" />
+      <GithubIcon href="https://www.github.com/Diorla" />
+      <CodepenIcon href="https://codepen.io/Diorla/" />
     </div>
-    <div className="copyright">
-      <span>&copy; </span>
-      <span>{new Date().getFullYear()} </span>
-      <span>Adeola Ade</span>
+    <div className="bottom">
+      Made with <span> ❤ </span> and React/Nextjs
     </div>
-    <div>
-      <a href="#top" onClick={() => window.scrollTo(0, 0)}>
-        Top
-      </a>
-    </div>
-    <div>Made with love and React/Nextjs and hosted on Vercel</div>
     <style jsx>{`
       .footer {
         display: flex;
+        flex-direction: column;
+        align-items: center;
         background: #333;
         color: white;
-        justify-content: space-evenly;
-        align-items: center;
+      }
+      .footer > div {
+        margin: 8px;
+        display: flex;
+      }
+      .top {
+        justify-content: space-between;
+        flex: 1;
+        width: 100%;
         padding: 8px;
-        flex-wrap: wrap;
       }
       .footer a {
         color: white;
-        margin: 4px;
       }
-      .footer > div {
-        display: flex;
-        flex: 1;
-        justify-content: space-evenly;
+      .footer .bottom {
+        display: block;
       }
-      .copyright {
-        justify-content: center;
-      }
-      .copyright span {
-        margin-right: 4px;
+      .bottom span {
+        color: red;
       }
     `}</style>
   </div>
