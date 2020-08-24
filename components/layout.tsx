@@ -24,6 +24,14 @@ export default function Layout(props: { children: ReactNode; title?: string }) {
           href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap"
+          rel="stylesheet"
+        />
+        <script
+          src="https://kit.fontawesome.com/cfb42fe2b0.js"
+          crossOrigin="anonymous" defer
+        ></script>
       </Head>
       <Header />
       {children}
