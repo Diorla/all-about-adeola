@@ -46,20 +46,14 @@ export default function Home() {
         </div>
         <div className="intro section">
           <h2>How can I help you?</h2>
+          <div>Design and create engaging website.</div>
           <div>
-            So this is brief introduction to who I am and what I can offer
-            prospective clients. Pariatur labore pariatur dolor ea eu qui.
-            Cillum sit Lorem anim eu irure cupidatat eu.
+            Create mobile apps with react-native for easy maintenance and shared
+            codebase
           </div>
-          <div>
-            Tempor laboris amet ad esse amet sint reprehenderit anim. Aliquip
-            reprehenderit nisi fugiat elit et esse. Id officia aliquip consequat
-            officia voluptate in. Ullamco anim officia laboris sit aute nisi eu
-            exercitation culpa laborum adipisicing cillum eiusmod duis.
-          </div>
+          <div>Deploy website and maintain server</div>
         </div>
         <div className="portfolio section">
-          {/*For websites, I should use links from the website as the logo*/}
           <h2>Latest work</h2>
           <div className="gallery">
             <a
