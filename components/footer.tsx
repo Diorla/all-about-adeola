@@ -7,9 +7,6 @@ export default () => (
         <span>{new Date().getFullYear()} </span>
         <span>Adeola Ade</span>
       </div>
-      <div>
-        <a href="#top">Top</a>
-      </div>
     </div>
     <div className="middle">
       <TwitterIcon
@@ -36,7 +33,7 @@ export default () => (
         display: flex;
       }
       .top {
-        justify-content: space-between;
+        justify-content: space-around;
         flex: 1;
         width: 100%;
         padding: 8px;
