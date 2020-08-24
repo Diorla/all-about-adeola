@@ -10,14 +10,18 @@ export default () => (
         </div>
         <div>
           <ul>
-            <li>
-              Hi! I am Adeola, a software engineer based in Ibadan, Nigeria.
-            </li>
+            <li>Hi! I am Adeola, a software engineer based in Nigeria.</li>
             <li>
               I enjoy programming and creating things for the web or mobile
               devices.
             </li>
             <li>I'm committed to creating great experience through my work.</li>
+            <li>
+              Local Time:{" "}
+              {new Date().toLocaleTimeString("en-GB", {
+                timeZone: "Africa/Lagos",
+              })}
+            </li>
           </ul>
         </div>
       </div>
@@ -25,9 +29,10 @@ export default () => (
         <ul>
           <li>Mobile first developer</li>
           <li>Responsive design</li>
-          <li>Mobile app with react-native</li>
           <li>Keen attention to details</li>
-          <li>Cross browser</li>
+          <li>Curious and a critical thinker</li>
+          <li>Cross browser tested website</li>
+          <li>Clean code and best practices</li>
         </ul>
       </div>
       <div className="section three">
@@ -65,9 +70,9 @@ export default () => (
           </ul>
           <ul>
             <li>Javascript</li>
-            <li>Typescript</li>
             <li>Node.js</li>
             <li>Electron.js</li>
+            <li>Typescript</li>
           </ul>
           <ul>
             <li>Python</li>
@@ -76,10 +81,10 @@ export default () => (
             <li>C#</li>
           </ul>
           <ul>
+            <li>Wireframe</li>
             <li>Adobe XD</li>
             <li>Blender</li>
             <li>Inkscape</li>
-            <li>LINQ</li>
           </ul>
           <ul>
             <li>Git</li>
@@ -97,6 +102,7 @@ export default () => (
         .one {
           width: 100%;
           flex-wrap: wrap;
+          margin: 20px 0;
         }
         .one div {
           display: flex;
@@ -109,14 +115,16 @@ export default () => (
           height: 240px;
           border-radius: 4px;
           padding: 8px;
-          background: lavender;
+          box-shadow: 0 0 4px -1px black;
         }
-        .one > div:first-of-type {
-          max-width: 260px;
-          margin: auto;
+        .one > div {
+          justify-content: space-around;
+        }
+        .one ul {
+          font-family: "Baloo Tamma 2", cursive;
         }
         .two {
-          height: 180px;
+          height: 210px;
           align-items: center;
           justify-content: space-around;
           font-family: cursive;
@@ -156,6 +164,20 @@ export default () => (
           }
           100% {
             background-position: 0% 50%;
+          }
+        }
+        img {
+          animation: imgRotation 40s linear infinite;
+        }
+        @keyframes imgRotation {
+          0% {
+            transform: rotate(10deg);
+          }
+          50% {
+            transform: rotate(-10deg);
+          }
+          100% {
+            transform: rotate(10deg);
           }
         }
       `}</style>
