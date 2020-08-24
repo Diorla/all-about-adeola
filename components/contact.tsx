@@ -4,9 +4,11 @@ export default () => (
       <img src="email.svg" alt="mail me" />
     </div>
     <div>
-      So you are interested in my service?{" "}
-      <a href="mailto:adeola@example.com">Send me an email</a> and I will reply
-      in less than 48 hours.
+      <div className="message">
+        If you have a question, interested in my service or just want to say hi,{" "}
+        <a href="mailto:contact@adeolaade.com">Send me an email</a> and I'll try
+        my best to get back to you!
+      </div>
     </div>
     <style jsx>{`
       #contact {
