@@ -13,7 +13,7 @@ export default () => (
       </li>
       <li>
         <Link href="/blogs">
-          <a>Articles</a>
+          <a>Journal</a>
         </Link>
       </li>
       <li>
