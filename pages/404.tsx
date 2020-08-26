@@ -42,6 +42,9 @@ export default () => (
         background-image: url(/notfound.svg);
         padding: 8px;
         flex-direction: column;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
       }
       .error {
         font-size: 3rem;
