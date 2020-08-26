@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Wikipedia",
+    "description": "Lots of articles",
+    "address": "https://www.wikipedia.org",
+    "tags": ["Articles", "website"]
+  },
+  {
+    "title": "Adeola website",
+    "description": "A personal website of Adeola Ade",
+    "address": "https://www.adeolaade.com",
+    "tags": ["Personal", "website"]
+  },
+  {
+    "title": "Google",
+    "description": "Search the internet",
+    "address": "https://www.google.com",
+    "tags": ["Search", "web"]
+  }
+]
