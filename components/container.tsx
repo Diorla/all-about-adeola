@@ -7,6 +7,7 @@ export default ({ children }) => (
         flex-direction: column;
         min-height: 100vh;
         justify-content: space-between;
+        background: rgba(0, 0, 0, 0.015);
       }
     `}</style>
   </div>
