@@ -1,40 +1,31 @@
 import Layout from "../components/layout";
 import Carousel from "../components/carousel";
 import Contact from "../components/contact";
+import { TwitterIcon, FacebookIcon } from "../components/icon";
 
-const commentary = [
+const reference = [
   {
-    name: "Ade Adeola",
-    image: "avatar.jpg",
+    name: "Tayo Adedotun",
+    image: "clients/tayo.jpg",
     comment:
-      "Aliqua nostrud adipisicing consequat in fugiat aliquip quis. Eu labore ullamco sit in minim nulla cupidatat.",
+      "Professional, diligent and talented. I am more than satisfied with work. I remembered when he convinced me to go online, I was pessimistic but now I can truly appreciate the work. Sales is way up, yet I'm doing less work due to automation.",
     links: (
-      <div>
-        <a href="facebook" target="_blank" rel="noreferrer">
-          Facebook
-        </a>
-      </div>
+      <>
+        <TwitterIcon href="https://twitter.com/_caphie?s=08" />
+      </>
     ),
   },
   {
-    name: "Ade Adeola",
-    image: "avatar.jpg",
+    name: "Abdulakeem Oke",
+    image: "clients/akeem.jpg",
     comment:
-      "Aliqua nostrud adipisicing consequat in fugiat aliquip quis. Eu labore ullamco sit in minim nulla cupidatat. Laborum nisi id elit fugiat nostrud ad veniam proident enim ut aute laboris eiusmod id. Aute excepteur duis elit aliquip ipsum et consectetur laboris amet ullamco duis velit do. Aute irure minim fugiat mollit culpa incididunt. Incididunt sint minim ullamco esse non eiusmod Lorem aliquip.",
+      "As an corp member at UMC, I was happy about my contribution. And the highlight of my time was when I came up with the idea to manage school's data online. This made us one of the 'hip' school and I must say, the website Adeola built for my school was straight out of my imagination, in fact, it was better! The staffs were so impressed with the work, they hired me full time.",
     links: (
-      <div>
-        <a href="facebook" target="_blank" rel="noreferrer">
-          Facebook
-        </a>
-      </div>
+      <>
+        <FacebookIcon href="https://www.facebook.com/oke.akeem" />
+        <TwitterIcon href="https://www.facebook.com/oke.akeem" />
+      </>
     ),
-  },
-  {
-    name: "Ade Adeola",
-    image: "avatar.jpg",
-    comment:
-      "Aliqua nostrud adipisicing consequat in fugiat aliquip quis. Eu labore ullamco sit in minim nulla cupidatat. Laborum nisi id elit fugiat nostrud ad veniam proident enim ut aute laboris eiusmod id. Aute excepteur duis elit aliquip ipsum et consectetur laboris amet ullamco duis velit do.",
-    links: null,
   },
 ];
 export default function Home() {
@@ -86,7 +77,7 @@ export default function Home() {
           </div>
         </section>
         <section className="testimony">
-          <Carousel data={commentary} />
+          <Carousel data={reference} />
         </section>
         <Contact />
       </main>

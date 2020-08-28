@@ -30,6 +30,10 @@ export default ({ name, image, comment, links }: Reference) => (
         float: left;
         margin: 2px;
       }
+      .card > div:last-child {
+        display: flex;
+        justify-content: space-around;
+      }
     `}</style>
   </div>
 );
