@@ -1,18 +1,18 @@
-export interface PersonalInfo {
+export interface Reference {
   name: string;
   image: string;
   comment: string;
   links: React.ReactNode;
 }
 
-export default (props: PersonalInfo) => (
+export default ({ name, image, comment, links }: Reference) => (
   <div className="card">
-    <h1>{props.name}</h1>
+    <h1>{name}</h1>
     <div>
-      <img src={props.image} alt={props.name} />
-      {props.comment}
+      <img src={image} alt={name} />
+      {comment}
     </div>
-    <div>{props.links}</div>
+    <div>{links}</div>
     <style jsx>{`
       h1 {
         font: 24px "Century Gothic", Futura, sans-serif;

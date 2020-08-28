@@ -1,9 +1,13 @@
-import Card, { PersonalInfo } from "./card";
+import Card, { Reference } from "./card";
 
-export default ({ data }) => (
+interface References {
+  data: Reference[];
+}
+
+export default ({ data }: References) => (
   <div className="slide-container">
     <div className="slides">
-      {data.map((item: PersonalInfo, idx: number) => (
+      {data.map((item: Reference, idx: number) => (
         <div key={idx} id={`slide-${idx}`}>
           <Card {...item} />
         </div>
