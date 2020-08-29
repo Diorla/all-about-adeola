@@ -12,8 +12,7 @@ export default function Home({ allPostsData }) {
       <main>
         <section className="intro">
           <div>
-            So, I have decided to catalogue my unique experiences with the hope
-            that I can preserve and revisit them. - Aug, 2020.
+            So, I have decided to catalogue new stuff that I have just learnt. - Aug, 2020.
           </div>
         </section>
         <section className="blogs">
