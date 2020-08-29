@@ -11,7 +11,7 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article>
+      <article className="article">
         <h1>{postData.title}</h1>
         <div className="date">
           <Date dateString={postData.date} />
@@ -22,35 +22,35 @@ export default function Post({ postData }) {
         />
         <div className="bottom">
           <Link href="/blogs">
-            <a>Back</a>
+            <a>Back to journal</a>
           </Link>
         </div>
       </article>
-      <style jsx>{`
-        h1 {
+      <style>{`
+        /*I need global so it will affect rendered .md files*/
+        .article h1 {
           text-align: center;
           font-weight: bold;
           font-size: 24px;
         }
-        article {
+        .article {
           padding: 8px;
           font-family: Roboto, Arial;
         }
-        .date {
+        .article .date {
           text-align: center;
         }
-        .content p {
+        .article .content p {
           margin-bottom: 8px;
           line-height: 24px;
         }
-        .content ul {
+        .article .content ul {
           margin: 8px;
         }
-        .content .content li {
-          margin: 8px;
+        .article .content li {
           list-style: inside;
         }
-        .bottom {
+        .article .bottom {
           text-align: end;
         }
       `}</style>
