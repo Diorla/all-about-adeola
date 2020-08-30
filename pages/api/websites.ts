@@ -1,22 +1,13 @@
+import { NextApiRequest, NextApiResponse } from "next";
 import data from "./data.json";
 
-interface link {
+interface Link {
   title: string;
   description: string;
   address: string;
   tags: string[];
 }
 
-interface links {
-  status: (
-    statusCode: number
-  ) => {
-    json: {
-      (item: link[]): void;
-    };
-  };
-}
-
-export default (_req: any, res: links) => {
+export default (_req: NextApiRequest, res: NextApiResponse<Link[]>) => {
   res.status(200).json(data);
 };
