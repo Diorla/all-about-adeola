@@ -1,29 +1,19 @@
 import Layout from "../components/layout";
 import Weblink from "../components/weblink";
 import Contact from "../components/contact";
-import Placeholder from "../components/placeholder";
-import "isomorphic-fetch";
+import { GetStaticProps } from "next";
+import path from "path";
+import fs from "fs";
 import { useEffect, useState } from "react";
 
-interface link {
+interface Link {
   title: string;
   description: string;
   address: string;
   tags: string[];
 }
 
-export default () => {
-  const [api, setApi] = useState(null);
-  useEffect(() => {
-    fetch("/api/websites")
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (myJson) {
-        setApi(myJson);
-      });
-    return () => null;
-  }, []);
+export default ({ resources }: { resources: Link[] }) => {
   return (
     <Layout>
       <main>
@@ -46,21 +36,14 @@ export default () => {
           <h2>
             Below are some of the important links to sites that I find helpful
           </h2>
-          {api ? (
-            <div>
-              {api
-                .sort((a, b) => (a.title < b.title ? -1 : 1))
-                .map((website: link, idx: number) => (
+          <div>
+            {resources &&
+              resources
+                .sort((a: Link, b: Link) => (a.title < b.title ? -1 : 1))
+                .map((website: Link, idx: number) => (
                   <Weblink {...website} key={idx} />
                 ))}
-            </div>
-          ) : (
-            <div>
-              {[1, 2, 3, 4, 5].map((item) => (
-                <Placeholder key={item} />
-              ))}
-            </div>
-          )}
+          </div>
         </section>
         <Contact />
       </main>
@@ -79,4 +62,16 @@ export default () => {
       `}</style>
     </Layout>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const res = path.join(process.cwd(), "api/data.json");
+  const result = fs.readFileSync(res, "utf8");
+  const resources: Link[] = JSON.parse(result);
+
+  return {
+    props: {
+      resources,
+    },
+  };
 };
