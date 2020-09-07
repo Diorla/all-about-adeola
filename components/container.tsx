@@ -1,4 +1,4 @@
-export default ({ children }) => (
+export default ({ children }: {children: React.ReactNode}) => (
   <div className="container">
     {children}
     <style jsx>{`
