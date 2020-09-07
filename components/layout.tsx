@@ -30,8 +30,10 @@ export default function Layout(props: { children: ReactNode; title?: string }) {
         />
         <script
           src="https://kit.fontawesome.com/cfb42fe2b0.js"
-          crossOrigin="anonymous" defer
+          crossOrigin="anonymous"
+          defer
         ></script>
+        <script src="/scripts/prism.js"></script>
       </Head>
       <Header />
       {children}
