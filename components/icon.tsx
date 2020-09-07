@@ -1,14 +1,28 @@
+import {
+  FaCodepen,
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaSlack,
+  FaTwitter,
+} from "react-icons/fa";
 interface iconProps {
   href: string;
-  icon: string;
+  children: React.ReactNode;
   brandColour: string;
   title?: string;
 }
 
-const Icon = (props: iconProps) => (
+const Icon = ({
+  href,
+  children,
+  brandColour,
+  title,
+}: iconProps): JSX.Element => (
   <li>
-    <a href={props.href} target="_blank" rel="noreferrer" title={props.title}>
-      <i className={`fab ${props.icon}`} aria-hidden="true"></i>
+    <a href={href} target="_blank" rel="noreferrer" title={title}>
+      <i className="icon">{children}</i>
     </a>
     <style jsx>{`
       li {
@@ -33,45 +47,62 @@ const Icon = (props: iconProps) => (
       a:hover {
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
       }
-      a .fab {
+      a > .icon {
         width: 100%;
         height: 100%;
         display: block;
         border-radius: 50%;
-        line-height: calc(30px - 3px);
+        line-height: calc(30px - 1.5px);
         font-size: 21px;
         background: linear-gradient(0deg, #ccc, #fff);
-        color: ${props.brandColour};
+        color: ${brandColour};
         transition: 0.5s;
       }
-      li a:hover .fab {
+      li a:hover > .icon {
         color: #eee;
-        background: ${props.brandColour};
+        background: ${brandColour};
       }
     `}</style>
   </li>
 );
 
-const FacebookIcon = (props: { href: string; title?: string }) => (
-  <Icon href={props.href} icon="fa-facebook" brandColour="#3b5998" />
+const FacebookIcon = (props: { href: string; title?: string }): JSX.Element => (
+  <Icon href={props.href} brandColour="#3b5998">
+    <FaFacebook />
+  </Icon>
 );
-const TwitterIcon = (props: { href: string; title?: string }) => (
-  <Icon href={props.href} icon="fa-twitter" brandColour="#1da1f2" />
+const TwitterIcon = (props: { href: string; title?: string }): JSX.Element => (
+  <Icon href={props.href} brandColour="#1da1f2">
+    <FaTwitter />
+  </Icon>
 );
-const GithubIcon = (props: { href: string; title?: string }) => (
-  <Icon href={props.href} icon="fa-github" brandColour="#333" />
+const GithubIcon = (props: { href: string; title?: string }): JSX.Element => (
+  <Icon href={props.href} brandColour="#333">
+    <FaGithub />
+  </Icon>
 );
-const InstagramIcon = (props: { href: string; title?: string }) => (
-  <Icon href={props.href} icon="fa-instagram" brandColour="#e4405f" />
+const InstagramIcon = (props: {
+  href: string;
+  title?: string;
+}): JSX.Element => (
+  <Icon href={props.href} brandColour="#e4405f">
+    <FaInstagram />
+  </Icon>
 );
-const CodepenIcon = (props: { href: string; title?: string }) => (
-  <Icon href={props.href} icon="fa-codepen" brandColour="#ae63e4" />
+const CodepenIcon = (props: { href: string; title?: string }): JSX.Element => (
+  <Icon href={props.href} brandColour="#ae63e4">
+    <FaCodepen />
+  </Icon>
 );
-const LinkedinIcon = (props: { href: string; title?: string }) => (
-  <Icon href={props.href} icon="fa-linkedin" brandColour="#0077b5" />
+const LinkedinIcon = (props: { href: string; title?: string }): JSX.Element => (
+  <Icon href={props.href} brandColour="#0077b5">
+    <FaLinkedin />
+  </Icon>
 );
-const SlackIcon = (props: { href: string; title?: string }) => (
-  <Icon href={props.href} icon="fa-slack" brandColour="#6ecadc" />
+const SlackIcon = (props: { href: string; title?: string }): JSX.Element => (
+  <Icon href={props.href} brandColour="#6ecadc">
+    <FaSlack />
+  </Icon>
 );
 
 export {
