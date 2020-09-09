@@ -28,7 +28,7 @@ export default function Layout(props: { children: ReactNode; title?: string }) {
           href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap"
           rel="stylesheet"
         />
-        <script src="/scripts/prism.js"></script>
+        <script src="/scripts/prism.js" defer></script>
       </Head>
       <Header />
       {children}
