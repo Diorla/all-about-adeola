@@ -22,7 +22,12 @@ export default function journal({ id, date, title, tags }: Post) {
     <style jsx>{`
       li {
         margin-bottom: 24px;
-      }`
-    }</style>
+      }
+      .tag {
+        margin: 4px;
+        font-size: 14px;
+        font-style: italic;
+      }
+      `}</style>
   </li>
 }
