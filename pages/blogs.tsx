@@ -1,12 +1,12 @@
 import { GetStaticProps } from "next";
 import Layout from "../components/layout";
-import { getSortedPostsData } from "../lib/posts";
-import Link from "next/link";
-import Date from "../components/date";
+import getSortedPostsData from "../lib/getSortedPostsData";
+import Journal from "../components/journal";
+import { Post } from "../lib/CONSTANTS";
 
 const addHash = (str: string) => `${str}`;
 
-export default function Home({ allPostsData }) {
+export default function Home({ allPostsData }: { allPostsData: Post[] }) {
   return (
     <Layout>
       <main>
@@ -18,22 +18,8 @@ export default function Home({ allPostsData }) {
         <section className="blogs">
           <h2>Journals</h2>
           <ul className="">
-            {allPostsData.map(({ id, date, title, tags }) => (
-              <li className="" key={id}>
-                <Link href="/posts/[id]" as={`/posts/${id}`}>
-                  <a>{title}</a>
-                </Link>
-                <div>
-                  <Date dateString={date} />
-                </div>
-                <div>
-                  {tags.map(addHash).map((item: string, idx: number) => (
-                    <span key={idx} className="tag">
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </li>
+            {allPostsData.map(({ id, date, title, tags }: Post) => (
+              <Journal id={id} key={id} date={date} title={title} tags={tags} />
             ))}
           </ul>
         </section>
@@ -58,14 +44,6 @@ export default function Home({ allPostsData }) {
         .blogs {
           flex: 1;
           padding: 8px;
-        }
-        .tag {
-          margin: 4px;
-          font-size: 14px;
-          font-style: italic;
-        }
-        li {
-          margin-bottom: 24px;
         }
       `}</style>
     </Layout>
