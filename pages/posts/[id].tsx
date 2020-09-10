@@ -1,11 +1,11 @@
 import Layout from "../../components/layout";
-import { getPostData } from "../../lib/posts";
+import getPostData from "../../lib/getPostData";
 import Head from "next/head";
 import Link from "next/link";
 import Date from "../../components/date";
-import { GetServerSideProps } from "next";
+import { PostData } from "../../lib/CONSTANTS";
 
-export default function Post({ postData }) {
+export default function Post({ postData }: { postData: PostData }) {
   return (
     <Layout>
       <Head>
@@ -57,9 +57,13 @@ export default function Post({ postData }) {
     </Layout>
   );
 }
-
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const postData = await getPostData(context.params.id);
+type Params = {
+  params: {
+    id: string
+  }
+}
+export const getServerSideProps = async ({ params }: Params) => {
+  const postData = await getPostData(params.id);
   return {
     props: {
       postData,
