@@ -75,13 +75,13 @@ export default function Home() {
           </div>
         </section>
         <section className="testimony">
-          <Carousel>
-            {reference.map((item, idx) => (
-              <div style={{ display: "block" }} key={idx}>
-                <Card {...item} />
-              </div>
-            ))}
-          </Carousel>
+          <div>
+            <Carousel>
+              {reference.map((item, idx) => (
+                <Card {...item} key={idx} />
+              ))}
+            </Carousel>
+          </div>
         </section>
         <Contact />
       </main>
@@ -98,7 +98,7 @@ export default function Home() {
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 300px;
+            min-height: 200px;
             width: 100%;
           }
           .landing {
@@ -159,8 +159,13 @@ export default function Home() {
             justify-content: space-evenly;
           }
           .testimony {
-            display: block;
             margin-bottom: 24px;
+          }
+          .testimony > div {
+            max-width: 640px;
+            display: block;
+            min-width: 320px;
+            width: 80%;
           }
         `}
       </style>
