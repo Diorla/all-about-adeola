@@ -38,14 +38,11 @@ export default function Home() {
         <section className="intro">
           <h2>How can I help you?</h2>
           <div>Design and create engaging website.</div>
-          <div>
-            Create mobile apps with react-native for easy maintenance and shared
-            codebase
-          </div>
-          <div>Deploy website and maintain server</div>
+          <div>Create cross platform mobile apps with react-native</div>
+          <div>Maintain server and databse</div>
         </section>
         <section className="portfolio">
-          <h2>Latest work</h2>
+          <h2>Latest</h2>
           <div className="gallery">
             <a
               href="www.hera-ng.shopify.com"
