@@ -2,6 +2,7 @@ import Layout from "../components/layout";
 import Carousel from "../components/carousel";
 import Contact from "../components/contact";
 import { TwitterIcon, FacebookIcon } from "../components/icon";
+import Card from "../components/card";
 
 const reference = [
   {
@@ -74,7 +75,13 @@ export default function Home() {
           </div>
         </section>
         <section className="testimony">
-          <Carousel data={reference} />
+          <Carousel>
+            {reference.map((item, idx) => (
+              <div style={{ display: "block" }} key={idx}>
+                <Card {...item} />
+              </div>
+            ))}
+          </Carousel>
         </section>
         <Contact />
       </main>
@@ -150,6 +157,10 @@ export default function Home() {
           }
           .portfolio {
             justify-content: space-evenly;
+          }
+          .testimony {
+            display: block;
+            margin-bottom: 24px;
           }
         `}
       </style>
