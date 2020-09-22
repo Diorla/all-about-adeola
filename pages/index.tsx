@@ -55,7 +55,7 @@ export default function Home() {
               <span>Hera shopping</span>
             </a>
             <a
-              href="https://drive.google.com/file/d/1O_F9xEqDOe3QAX_NepnxXZyUs2DwdNt4/view?usp=sharing"
+              href="https://github.com/Diorla/character-generator/releases/tag/2.0.1"
               title="randomly generates character attributes"
               target="_blank"
               rel="noreferrer"
