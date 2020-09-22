@@ -1,5 +1,4 @@
-import { set } from "date-fns";
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode } from "react";
 import Slider from "react-slick";
 export interface CarouselProps {
   children: ReactNode;
