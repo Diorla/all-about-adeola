@@ -1,25 +1,32 @@
 import { GetStaticProps } from "next";
 import Layout from "../components/layout";
 import getSortedPostsData from "../lib/getSortedPostsData";
-import Journal from "../components/journal";
+import Journals from "../components/journals";
 import { Post } from "../lib/CONSTANTS";
 
 const addHash = (str: string) => `${str}`;
 
-export default function Home({ allPostsData }: { allPostsData: Post[] }) {
+export default function Journal({ allPostsData }: { allPostsData: Post[] }) {
   return (
     <Layout>
       <main>
         <section className="intro">
           <div>
-            So, I have decided to catalogue new stuff that I have just learnt. - Aug, 2020.
+            So, I have decided to catalogue new stuff that I have just learnt. -
+            Aug, 2020.
           </div>
         </section>
-        <section className="blogs">
+        <section className="journals">
           <h2>Journals</h2>
           <ul className="">
             {allPostsData.map(({ id, date, title, tags }: Post) => (
-              <Journal id={id} key={id} date={date} title={title} tags={tags} />
+              <Journals
+                id={id}
+                key={id}
+                date={date}
+                title={title}
+                tags={tags}
+              />
             ))}
           </ul>
         </section>
@@ -41,7 +48,7 @@ export default function Home({ allPostsData }: { allPostsData: Post[] }) {
           border-radius: 4px;
           max-width: 640px;
         }
-        .blogs {
+        .journals {
           flex: 1;
           padding: 8px;
         }

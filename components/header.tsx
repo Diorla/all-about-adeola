@@ -12,7 +12,7 @@ export default () => (
         </Link>
       </li>
       <li>
-        <Link href="/blogs">
+        <Link href="/journal">
           <a>Journal</a>
         </Link>
       </li>

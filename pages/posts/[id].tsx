@@ -21,7 +21,7 @@ export default function Post({ postData }: { postData: PostData }) {
           className="content"
         />
         <div className="bottom">
-          <Link href="/blogs">
+          <Link href="/journal">
             <a>Back to journal</a>
           </Link>
         </div>
@@ -59,9 +59,9 @@ export default function Post({ postData }: { postData: PostData }) {
 }
 type Params = {
   params: {
-    id: string
-  }
-}
+    id: string;
+  };
+};
 export const getServerSideProps = async ({ params }: Params) => {
   const postData = await getPostData(params.id);
   return {
