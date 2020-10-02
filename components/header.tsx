@@ -12,11 +12,6 @@ export default () => (
         </Link>
       </li>
       <li>
-        <Link href="/journal">
-          <a>Journal</a>
-        </Link>
-      </li>
-      <li>
         <Link href="/showcase">
           <a>Showcase</a>
         </Link>
