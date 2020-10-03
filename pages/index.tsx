@@ -40,14 +40,14 @@ export default function Home() {
           <h2>How can I help you?</h2>
           <div>Design and create engaging website.</div>
           <div>Create cross platform mobile apps with react-native</div>
-          <div>Maintain server and databse</div>
+          <div>Maintain server and database</div>
         </section>
         <section className="portfolio">
           <h2>Latest</h2>
           <div className="gallery">
             <a
-              href="www.hera-ng.shopify.com"
-              title="hera women shopping"
+              href="www.hera.adeolaade.com"
+              title="hera spa"
               target="_blank"
               rel="noreferrer"
             >
@@ -135,7 +135,7 @@ export default function Home() {
           }
           .intro div {
             max-width: 720px;
-            text-align: justify;
+            text-align: center;
           }
           .gallery {
             justify-content: space-evenly;
