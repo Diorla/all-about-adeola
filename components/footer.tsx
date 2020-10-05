@@ -11,47 +11,58 @@ const Footer = () => (
       <div>Ade Adeola</div>
       <div>&copy; {new Date().getFullYear()}</div>
     </div>
-    <div className="social">
-      <a
-        href="https://medium.com/@adedotster/"
-        target="_blank"
-        rel="noreferrer"
-        className="medium"
-      >
-        <FaMedium /> Blogs
-      </a>
-      <a
-        href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fwww.adeolaade.com%2Fabout%2F&ref_src=twsrc%5Etfw&region=follow_link&screen_name=dihorla&tw_p=followbutton/"
-        target="_blank"
-        rel="noreferrer"
-        className="twitter"
-      >
-        <FaTwitter /> Follow
-      </a>
-      <a
-        href="https://www.linkedin.com/in/ade-adeola/"
-        target="_blank"
-        rel="noreferrer"
-        className="linkedin"
-      >
-        <FaLinkedin /> Linkedin
-      </a>
-      <a
-        href="https://www.github.com/Diorla/"
-        target="_blank"
-        rel="noreferrer"
-        className="github"
-      >
-        <FaGithub /> Github
-      </a>
-      <a
-        href="https://codepen.io/Diorla/"
-        target="_blank"
-        rel="noreferrer"
-        className="codepen"
-      >
-        <FaCodepen /> Codepen
-      </a>
+    <div className="links">
+      <div className="social">
+        <a
+          href="https://medium.com/@adedotster/"
+          target="_blank"
+          rel="noreferrer"
+          className="medium"
+        >
+          <FaMedium />
+        </a>
+        <a
+          href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fwww.adeolaade.com%2Fabout%2F&ref_src=twsrc%5Etfw&region=follow_link&screen_name=dihorla&tw_p=followbutton/"
+          target="_blank"
+          rel="noreferrer"
+          className="twitter"
+        >
+          <FaTwitter />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/ade-adeola/"
+          target="_blank"
+          rel="noreferrer"
+          className="linkedin"
+        >
+          <FaLinkedin />
+        </a>
+        <a
+          href="https://www.github.com/Diorla/"
+          target="_blank"
+          rel="noreferrer"
+          className="github"
+        >
+          <FaGithub />
+        </a>
+        <a
+          href="https://codepen.io/Diorla/"
+          target="_blank"
+          rel="noreferrer"
+          className="codepen"
+        >
+          <FaCodepen />
+        </a>
+      </div>
+      <div>
+        <a
+          href="https://components.adeolaade.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          web components
+        </a>
+      </div>
     </div>
     <div className="intro">
       <div>
@@ -73,35 +84,28 @@ const Footer = () => (
           justify-content: space-evenly;
         }
         .footer > div {
-          border: none;
           align-items: center;
           margin: 0;
         }
       }
-      .copyright,
-      .social,
-      .intro {
+      .footer > div {
         display: flex;
         flex-direction: column;
         flex: 1;
         align-items: center;
         justify-content: center;
         margin: 16px;
-        border-left: 1px solid silver;
         padding: 16px;
-      }
-      .social {
-        align-items: initial;
-      }
-      .copyright {
-        border: none;
       }
       a {
         display: flex;
         align-items: center;
+        padding: 2px;
+        transition: 0.2s linear;
       }
-      a:hover {
+      .social a:hover {
         text-decoration: none;
+        box-shadow: 0 0 4px;
       }
       .medium {
         color: #00ab6c;
@@ -120,6 +124,14 @@ const Footer = () => (
       }
       span {
         color: red;
+      }
+      .links div {
+        flex: 1;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        align-items: center;
+        text-align: center;
       }
     `}</style>
   </div>
