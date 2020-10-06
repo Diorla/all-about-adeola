@@ -46,13 +46,13 @@ export default function Home() {
           <h2>Latest</h2>
           <div className="gallery">
             <a
-              href="www.hera.adeolaade.com"
+              href="https://hera.adeolaade.com"
               title="hera spa"
               target="_blank"
               rel="noreferrer"
             >
               <img src="works/hera.png" alt="hera" />
-              <span>Hera shopping</span>
+              <span>Hera spa</span>
             </a>
             <a
               href="https://github.com/Diorla/character-generator/releases/tag/2.0.1"
@@ -64,7 +64,7 @@ export default function Home() {
               <span>Character generator</span>
             </a>
             <a
-              href="www.weblinkio.app"
+              href="https://weblinkio.app"
               title="Save all your links"
               target="_blank"
               rel="noreferrer"
