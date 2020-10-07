@@ -32,7 +32,7 @@ const RevealedDiv = styled.div`
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  animation: ${bounceAnimation} 2s ease 1s 1 forwards;
+  animation: ${bounceAnimation} 2s ease 0.2s 1 forwards;
 `;
 
 export interface BounceProps {
