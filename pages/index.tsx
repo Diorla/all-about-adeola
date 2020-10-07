@@ -12,7 +12,10 @@ const reference = [
       "Professional, diligent and talented. I am more than satisfied with work. I remembered when he convinced me to go online, I was pessimistic but now I can truly appreciate the work. Sales is way up, yet I'm doing less work due to automation.",
     links: (
       <>
-        <TwitterIcon href="https://twitter.com/_caphie?s=08" />
+        <TwitterIcon
+          href="https://twitter.com/_caphie?s=08"
+          title="Tayo twitter page"
+        />
       </>
     ),
   },
@@ -23,8 +26,14 @@ const reference = [
       "As an corp member at UMC, I was happy about my contribution. And the highlight of my time was when I came up with the idea to manage school's data online. This made us one of the 'hip' school and I must say, the website Adeola built for my school was straight out of my imagination, in fact, it was better! The staffs were so impressed with the work, they hired me full time.",
     links: (
       <>
-        <FacebookIcon href="https://www.facebook.com/oke.akeem" />
-        <TwitterIcon href="https://www.facebook.com/oke.akeem" />
+        <FacebookIcon
+          href="https://www.facebook.com/oke.akeem"
+          title="Akeem facebook page"
+        />
+        <TwitterIcon
+          href="https://www.twitter.com/@kebzor"
+          title="Akeem twitter page"
+        />
       </>
     ),
   },

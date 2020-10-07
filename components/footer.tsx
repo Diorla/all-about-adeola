@@ -18,6 +18,7 @@ const Footer = () => (
           target="_blank"
           rel="noreferrer"
           className="medium"
+          title="blogs"
         >
           <FaMedium />
         </a>
@@ -26,6 +27,7 @@ const Footer = () => (
           target="_blank"
           rel="noreferrer"
           className="twitter"
+          title="follow me"
         >
           <FaTwitter />
         </a>
@@ -34,6 +36,7 @@ const Footer = () => (
           target="_blank"
           rel="noreferrer"
           className="linkedin"
+          title="linkedin"
         >
           <FaLinkedin />
         </a>
@@ -42,6 +45,7 @@ const Footer = () => (
           target="_blank"
           rel="noreferrer"
           className="github"
+          title="repositories"
         >
           <FaGithub />
         </a>
@@ -50,6 +54,7 @@ const Footer = () => (
           target="_blank"
           rel="noreferrer"
           className="codepen"
+          title="ui collections"
         >
           <FaCodepen />
         </a>

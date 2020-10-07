@@ -67,17 +67,17 @@ const Icon = ({
 );
 
 const FacebookIcon = (props: { href: string; title?: string }): JSX.Element => (
-  <Icon href={props.href} brandColour="#3b5998">
+  <Icon title={props.title} href={props.href} brandColour="#3b5998">
     <FaFacebook />
   </Icon>
 );
 const TwitterIcon = (props: { href: string; title?: string }): JSX.Element => (
-  <Icon href={props.href} brandColour="#1da1f2">
+  <Icon title={props.title} href={props.href} brandColour="#1da1f2">
     <FaTwitter />
   </Icon>
 );
 const GithubIcon = (props: { href: string; title?: string }): JSX.Element => (
-  <Icon href={props.href} brandColour="#333">
+  <Icon title={props.title} href={props.href} brandColour="#333">
     <FaGithub />
   </Icon>
 );
@@ -85,22 +85,22 @@ const InstagramIcon = (props: {
   href: string;
   title?: string;
 }): JSX.Element => (
-  <Icon href={props.href} brandColour="#e4405f">
+  <Icon title={props.title} href={props.href} brandColour="#e4405f">
     <FaInstagram />
   </Icon>
 );
 const CodepenIcon = (props: { href: string; title?: string }): JSX.Element => (
-  <Icon href={props.href} brandColour="#ae63e4">
+  <Icon title={props.title} href={props.href} brandColour="#ae63e4">
     <FaCodepen />
   </Icon>
 );
 const LinkedinIcon = (props: { href: string; title?: string }): JSX.Element => (
-  <Icon href={props.href} brandColour="#0077b5">
+  <Icon title={props.title} href={props.href} brandColour="#0077b5">
     <FaLinkedin />
   </Icon>
 );
 const SlackIcon = (props: { href: string; title?: string }): JSX.Element => (
-  <Icon href={props.href} brandColour="#6ecadc">
+  <Icon title={props.title} href={props.href} brandColour="#6ecadc">
     <FaSlack />
   </Icon>
 );
