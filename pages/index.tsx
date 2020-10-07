@@ -60,7 +60,7 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              <img src="works/hera.png" alt="hera" />
+              <img src="works/hera.png" alt="hera logo" />
               <span>Hera spa</span>
             </a>
             <a
@@ -69,7 +69,7 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              <img src="works/characters.png" alt="characters" />
+              <img src="works/characters.png" alt="char gen logo" />
               <span>Character generator</span>
             </a>
             <a
@@ -78,8 +78,8 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              <img src="works/linker.png" alt="weblinkio" />
-              <span>Weblinkio</span>
+              <img src="works/linker.png" alt="web link logo " />
+              <span>Web link</span>
             </a>
           </div>
         </section>

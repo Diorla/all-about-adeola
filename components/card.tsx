@@ -9,7 +9,7 @@ export default ({ name, image, comment, links }: Reference) => (
   <div className="card">
     <h1>{name}</h1>
     <div>
-      <img src={image} alt={name} />
+      <img src={image} alt={`${name} profile`} />
       {comment}
     </div>
     <div>{links}</div>

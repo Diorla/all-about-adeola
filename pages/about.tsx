@@ -27,7 +27,7 @@ export default () => (
     <main>
       <div className="section one">
         <div>
-          <img src="avatar.jpg" alt="Profile image" />
+          <img src="avatar.jpg" alt="Ade Adeola" />
         </div>
         <div>
           <ul>
