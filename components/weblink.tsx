@@ -1,13 +1,31 @@
+import styled, { keyframes } from "styled-components";
+
 interface link {
   title: string;
   description: string;
   address: string;
   tags: string[];
+  delay: number;
 }
+const showElement = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
 
+const StyledWeblink = styled.div<{ delay: number }>`
+  margin-bottom: 8px;
+  box-shadow: 0 1px 1px silver;
+  padding: 8px;
+  opacity: 0;
+  animation: ${showElement} 0.2s ease ${(props) => props.delay}s 1 forwards;
+`;
 export default (web: link) => {
   return (
-    <div className="weblink">
+    <StyledWeblink delay={web.delay}>
       <a href={web.address}>{web.title}</a>
       <div>{web.description}</div>
       <div>
@@ -16,20 +34,15 @@ export default (web: link) => {
         ))}
       </div>
       <style jsx>{`
-        .weblink {
-          margin-bottom: 8px;
-          box-shadow: 0 1px 1px silver;
-          padding: 8px;
-        }
         span {
           margin: 4px;
           font-style: italic;
           text-transform: lowercase;
         }
         span::before {
-          content: "-"
+          content: "-";
         }
       `}</style>
-    </div>
+    </StyledWeblink>
   );
 };
