@@ -24,11 +24,6 @@ export default () => (
             <a>Home</a>
           </Link>
         </li>
-        <li>
-          <Link href="/journal">
-            <a>Journal</a>
-          </Link>
-        </li>
       </ul>
     </div>
     <div></div>
