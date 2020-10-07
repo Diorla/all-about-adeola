@@ -158,6 +158,8 @@ export default function Home() {
             display: flex;
             text-decoration: none;
             align-items: center;
+            color: #004d40;
+            text-shadow: 0 0 1px #e0f2f1;
           }
           .gallery a:hover span {
             opacity: 1;
