@@ -12,6 +12,7 @@ const StyledDiv = styled.div`
   height: 480px;
   max-width: 720px;
   width: 100%;
+  box-shadow: 0 0 2px silver;
   &:hover > div {
     transform: scale(1);
   }
