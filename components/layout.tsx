@@ -38,7 +38,6 @@ export default function Layout(props: { children: ReactNode; title?: string }) {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
-        <script src="/scripts/prism.js" defer></script>
       </Head>
       <Header />
       {children}
