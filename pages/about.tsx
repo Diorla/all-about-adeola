@@ -1,6 +1,27 @@
 import Layout from "../components/layout";
 import Contact from "../components/contact";
+import {
+  SiAdobexd,
+  SiCss3,
+  SiFirebase,
+  SiGit,
+  SiGnubash,
+  SiGooglechrome,
+  SiHtml5,
+  SiJavascript,
+  SiReact,
+  SiTypescript,
+  SiWire,
+} from "react-icons/si";
+import React from "react";
+import styled from "styled-components";
 
+const Icon = styled.div`
+  color: ${(props) => props.color};
+  margin-right: 4px;
+  display: flex;
+  align-items: center;
+`;
 export default () => (
   <Layout>
     <main>
@@ -36,21 +57,83 @@ export default () => (
         </ul>
       </div>
       <div className="section three">
-        <h1>Skillset</h1>
+        <h1>Tools</h1>
         <div>
           <ul>
-            <li>HTML</li>
-            <li>JSON</li>
-            <li>YAML</li>
-            <li>LINQ</li>
+            <li>
+              <Icon color="#e65327">
+                <SiHtml5 />
+              </Icon>
+              HTML5
+            </li>
+            <li>
+              <Icon color="#498bda">
+                <SiCss3 />
+              </Icon>
+              CSS
+            </li>
+            <li>
+              <Icon color="#ffcb2c">
+                <SiFirebase />
+              </Icon>
+              Firebase
+            </li>
+            <li>
+              <Icon color="#f0db4f">
+                <SiJavascript />
+              </Icon>
+              Javascript
+            </li>
+            <li>
+              <Icon color="#0074c1">
+                <SiTypescript />
+              </Icon>
+              Typescript
+            </li>
+            <li>
+              <Icon color="#4a96ab">
+                <SiReact />
+              </Icon>
+              React-js
+            </li>
+            <li>
+              <Icon color="#61dafb">
+                <SiReact />
+              </Icon>
+              React-native
+            </li>
+            <li>
+              <Icon color="#450135">
+                <SiAdobexd />
+              </Icon>
+              Adobe XD
+            </li>
+            <li>
+              <Icon color="">
+                <SiWire />
+              </Icon>
+              Wireframe
+            </li>
+            <li>
+              <Icon color="#f54d27">
+                <SiGit />
+              </Icon>
+              Git
+            </li>
+            <li>
+              <Icon color="#283037">
+                <SiGnubash />
+              </Icon>
+              Bash
+            </li>
+            <li>
+              <Icon color="#efc62b">
+                <SiGooglechrome />
+              </Icon>
+              Chrome DevTools
+            </li>
           </ul>
-          <ul>
-            <li>CSS</li>
-            <li>SCSS</li>
-            <li>LESS</li>
-            <li>PostCSS</li>
-          </ul>
-          <ul>
+          {/* <ul>
             <li>Material-ui</li>
             <li>Semantic-ui</li>
             <li>Boostrap</li>
@@ -61,12 +144,6 @@ export default () => (
             <li>MongoDB</li>
             <li>Expressjs</li>
             <li>AWS</li>
-          </ul>
-          <ul>
-            <li>Reactjs</li>
-            <li>Nextjs</li>
-            <li>React-native</li>
-            <li>Redux</li>
           </ul>
           <ul>
             <li>Javascript</li>
@@ -86,12 +163,7 @@ export default () => (
             <li>Blender</li>
             <li>Inkscape</li>
           </ul>
-          <ul>
-            <li>Git</li>
-            <li>Github</li>
-            <li>Bash</li>
-            <li>Chrome DevTools</li>
-          </ul>
+          <ul></ul> */}
         </div>
         <Contact />
       </div>
@@ -132,7 +204,6 @@ export default () => (
         }
         .three {
           flex-direction: column;
-          align-items: center;
         }
         .three > div {
           display: flex;
@@ -145,6 +216,15 @@ export default () => (
           text-align: center;
           margin: 4px;
           border-bottom: 1px solid teal;
+          display: flex;
+          flex: 1;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+        }
+        .three li {
+          margin: 16px;
+          display: flex;
+          align-items: center;
         }
         .three h1 {
           font-weight: bold;
