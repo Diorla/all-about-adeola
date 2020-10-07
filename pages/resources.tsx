@@ -4,6 +4,8 @@ import Contact from "../components/contact";
 import { GetStaticProps } from "next";
 import path from "path";
 import fs from "fs";
+import { useState } from "react";
+import Input from "../components/Input";
 
 interface Link {
   title: string;
@@ -13,6 +15,7 @@ interface Link {
 }
 
 export default ({ resources }: { resources: Link[] }) => {
+  const [search, setSearch] = useState("");
   return (
     <Layout>
       <main>
@@ -34,12 +37,20 @@ export default ({ resources }: { resources: Link[] }) => {
               Below are some of the important links to sites that I find helpful
             </span>
           </h1>
-          <div>
+          <div className="search-input">
+            <Input
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              type="search"
+            />
+          </div>
+          <div className="resources">
             {resources &&
               resources
+                .filter((link) => link.tags.join(" ").includes(search))
                 .sort((a: Link, b: Link) => (a.title < b.title ? -1 : 1))
                 .map((website: Link, idx: number) => (
-                  <Weblink {...website} key={idx} />
+                  <Weblink {...website} key={website.title} delay={idx * 0.1} />
                 ))}
           </div>
         </section>
@@ -64,6 +75,30 @@ export default ({ resources }: { resources: Link[] }) => {
         }
         section {
           margin-bottom: 24px;
+        }
+        .search-input {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+        }
+        .search-input > input {
+          min-width: 280px;
+        }
+        .resources {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-column-gap: 0px;
+          grid-row-gap: 0px;
+        }
+        @media screen and (max-width: 600px) {
+          .resources {
+            grid-template-columns: repeat(1, 1fr);
+          }
+        }
+        @media screen and (min-width: 1024px) {
+          .resources {
+            grid-template-columns: repeat(3, 1fr);
+          }
         }
       `}</style>
     </Layout>
