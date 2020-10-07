@@ -4,7 +4,6 @@ import Contact from "../components/contact";
 import { GetStaticProps } from "next";
 import path from "path";
 import fs from "fs";
-import { useEffect, useState } from "react";
 
 interface Link {
   title: string;
@@ -18,11 +17,7 @@ export default ({ resources }: { resources: Link[] }) => {
     <Layout>
       <main>
         <section>
-          <h2>Credits</h2>
-          <div>
-            Icons are sourced from{" "}
-            <a href="https://fontawesome.com/">Fontawesome</a>{" "}
-          </div>
+          <h1>Credits</h1>
           <div>
             I got the lovely svg drawings from{" "}
             <a href="https://undraw.co/">undraw</a>
@@ -33,9 +28,12 @@ export default ({ resources }: { resources: Link[] }) => {
           </div>
         </section>
         <section>
-          <h2>
-            Below are some of the important links to sites that I find helpful
-          </h2>
+          <h1>
+            Resources
+            <span>
+              Below are some of the important links to sites that I find helpful
+            </span>
+          </h1>
           <div>
             {resources &&
               resources
@@ -52,9 +50,17 @@ export default ({ resources }: { resources: Link[] }) => {
           flex: 1;
           padding: 8px;
         }
-        h2 {
+        h1 {
           text-align: center;
           font-size: 24px;
+          display: flex;
+          flex-direction: column;
+          border-bottom: 1px solid teal;
+          margin-bottom: 16px;
+        }
+        h1 span {
+          font-size: 14px;
+          color: #212121;
         }
         section {
           margin-bottom: 24px;
