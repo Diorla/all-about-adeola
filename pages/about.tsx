@@ -185,6 +185,7 @@ export default () => (
         }
         .one img {
           height: 240px;
+          width: 240px;
           border-radius: 4px;
           padding: 8px;
           box-shadow: 0 0 4px -1px black;
