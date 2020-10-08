@@ -21,6 +21,8 @@ const StyledWeblink = styled.div<{ delay: number }>`
   box-shadow: 0 1px 1px silver;
   padding: 8px;
   opacity: 0;
+  background: white;
+  margin: 4px;
   animation: ${showElement} 0.2s ease ${(props) => props.delay}s 1 forwards;
 `;
 export default (web: link) => {
