@@ -48,7 +48,12 @@ export default ({ resources }: { resources: Link[] }) => {
           <div className="resources">
             {resources &&
               resources
-                .filter((link) => link.tags.join(" ").includes(search))
+                .filter((link) =>
+                  link.tags
+                    .join(" ")
+                    .toLowerCase()
+                    .includes(search.toLowerCase())
+                )
                 .sort((a: Link, b: Link) => (a.title < b.title ? -1 : 1))
                 .map((website: Link, idx: number) => (
                   <Weblink {...website} key={website.title} delay={idx * 0.1} />
