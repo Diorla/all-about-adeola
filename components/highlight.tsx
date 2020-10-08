@@ -12,7 +12,7 @@ const StyledDiv = styled.div`
   height: 480px;
   max-width: 720px;
   width: 100%;
-  box-shadow: 0 0 2px silver;
+  box-shadow: 0 0 6px;
   &:hover > div {
     transform: scale(1);
   }
@@ -49,7 +49,9 @@ const Highlight = ({ name, link, img, description }: HighlightProps) => (
       <SlideDiv>{description}</SlideDiv>
     </StyledDiv>
     <div style={{ marginBottom: 32 }}>
-      <a href={link}>{name}</a>
+      <a href={link} target="_blank" rel="noreferrer">
+        {name}
+      </a>
     </div>
   </Bounce>
 );
