@@ -121,6 +121,7 @@ export default function Home() {
             background-blend-mode: hard-light;
             height: calc(100vh - 60px);
             justify-content: space-around;
+            background-position: center;
           }
           @media screen and (max-width: 496px) .landing {
             height: calc(100vh - 90px);
@@ -134,8 +135,7 @@ export default function Home() {
             border-radius: 8px;
             text-shadow: 0 0 2px white;
             text-align: center;
-            width: 80%;
-            min-width: 240px;
+            width: clamp(240px, 80%, 640px);
             font-weight: bolder;
           }
           .intro {
