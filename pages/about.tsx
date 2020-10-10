@@ -133,37 +133,6 @@ export default () => (
               Chrome DevTools
             </li>
           </ul>
-          {/* <ul>
-            <li>Material-ui</li>
-            <li>Semantic-ui</li>
-            <li>Boostrap</li>
-            <li>Antd</li>
-          </ul>
-          <ul>
-            <li>Firebase</li>
-            <li>MongoDB</li>
-            <li>Expressjs</li>
-            <li>AWS</li>
-          </ul>
-          <ul>
-            <li>Javascript</li>
-            <li>Node.js</li>
-            <li>Electron.js</li>
-            <li>Typescript</li>
-          </ul>
-          <ul>
-            <li>Python</li>
-            <li>R</li>
-            <li>SQL</li>
-            <li>C#</li>
-          </ul>
-          <ul>
-            <li>Wireframe</li>
-            <li>Adobe XD</li>
-            <li>Blender</li>
-            <li>Inkscape</li>
-          </ul>
-          <ul></ul> */}
         </div>
         <Contact />
       </div>
@@ -230,6 +199,7 @@ export default () => (
         .three h1 {
           font-weight: bold;
           border-bottom: 1px solid teal;
+          text-align: center;
         }
         .two {
           background: linear-gradient(218deg, #e0f2f1, #008080);
