@@ -29,6 +29,16 @@ export default ({ resources }: { resources: Link[] }) => {
             For the patterned backgrounds, check out{" "}
             <a href="http://www.heropatterns.com/">Hero patterns</a>
           </div>
+          <div>
+            Landing page image by{" "}
+            <a href="https://pixabay.com/users/creativemagic-480360/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3227459">
+              Magic Creative
+            </a>{" "}
+            from{" "}
+            <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3227459">
+              Pixabay
+            </a>
+          </div>
         </section>
         <section>
           <h1>
