@@ -124,7 +124,7 @@ export default function Home() {
             background-position: center;
           }
           @media screen and (max-width: 496px) .landing {
-            height: calc(100vh - 90px);
+            height: calc(100vh - 100px);
           }
           .landing div {
             font-size: 24px;
