@@ -79,6 +79,7 @@ export default () => (
         .header {
           flex-direction: column;
           justify-content: space-evenly;
+          position: relative;
         }
       }
     `}</style>
