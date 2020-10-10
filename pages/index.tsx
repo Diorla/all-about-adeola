@@ -110,25 +110,33 @@ export default function Home() {
             width: 100%;
           }
           .landing {
-            background-image: url(landing.svg);
-            background-size: 100% 100%;
-            background-color: #e0f2f1;
+            background-image: url(grid.jpg);
+            background-color: teal;
             background-repeat: no-repeat;
             font-family: helvetica;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             background-position: right;
-            background-size: contain;
-            height: 60vh;
+            background-size: cover;
+            background-blend-mode: hard-light;
+            height: calc(100vh - 60px);
+            justify-content: space-around;
+          }
+          @media screen and (max-width: 496px) .landing {
+            height: calc(100vh - 90px);
           }
           .landing div {
             font-size: 24px;
-            color: teal;
+            color: black;
             padding: 8px;
-            background-color: rgba(255, 255, 255, 0.7);
-            max-width: 320px;
+            background-color: #e0f2f1bf;
             margin: 16px;
             border-radius: 8px;
+            text-shadow: 0 0 2px white;
+            text-align: center;
+            width: 80%;
+            min-width: 240px;
+            font-weight: bolder;
           }
           .intro {
             display: flex;
