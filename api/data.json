@@ -177,5 +177,27 @@
       "accessibility",
       "websites"
     ]
+  },
+  {
+    "title": "Favicon generator",
+    "description": "Generates several image format and sizes for websites",
+    "address": "https://www.favicon-generator.org/",
+    "tags": [
+      "tools",
+      "image",
+      "websites",
+      "favicon"
+    ]
+  },
+  {
+    "title": "Image converter",
+    "description": "Converts image from one type or another",
+    "address": "https://convertio.co/",
+    "tags": [
+      "tools",
+      "image",
+      "websites",
+      "converter"
+    ]
   }
 ]
