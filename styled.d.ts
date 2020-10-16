@@ -90,7 +90,8 @@ declare module "styled-components" {
       active?: string;
     };
   }
-  export interface Animation {
+  export interface Timing {
     transition: string;
+    animation: string;
   }
 }
