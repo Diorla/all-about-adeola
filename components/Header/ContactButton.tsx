@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import animation from "../../theme/animation";
@@ -18,8 +19,8 @@ export const StyledHighlight = styled(StyledLink)`
   }
 `;
 
-export default ({ href, title }: { href: string; title: string }) => (
-  <Link href={href}>
-    <StyledHighlight>{title}</StyledHighlight>
+export default () => (
+  <Link href="#contact">
+    <StyledHighlight>Contact</StyledHighlight>
   </Link>
 );

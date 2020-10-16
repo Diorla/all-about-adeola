@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "./Link";
 import Logo from "./Logo";
 import ContactButton from "./ContactButton";
@@ -6,12 +7,12 @@ import Wrapper from "./Wrapper";
 
 export default () => (
   <Wrapper id="top">
-    <Logo href="/" title="Adeola Ade" />
+    <Logo />
     <Nav>
       <Link href="/about" title="About" />
       <Link href="/showcase" title="Showcase" />
       <Link href="/resources" title="Resources" />
-      <ContactButton href="#contact" title="Contact" />
+      <ContactButton />
     </Nav>
   </Wrapper>
 );

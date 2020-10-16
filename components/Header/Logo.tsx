@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 import styled, { ThemeProvider } from "styled-components";
 import { StyledLink } from "./Link";
@@ -15,8 +16,8 @@ export const StyledLogo = styled(StyledLink)`
   }
 `;
 
-export default ({ href, title }: { href: string; title: string }) => (
-  <Link href={href}>
-    <StyledLogo>{title}</StyledLogo>
+export default () => (
+  <Link href="/">
+    <StyledLogo>Adeola Ade</StyledLogo>
   </Link>
 );
