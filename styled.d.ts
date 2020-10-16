@@ -15,7 +15,7 @@ declare module "styled-components" {
       margin: string;
       padding: string;
     };
-    highlight: {
+    contact: {
       backgroundColor: string;
       borderRadius: string;
       textAlign: string;

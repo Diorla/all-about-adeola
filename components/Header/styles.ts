@@ -18,7 +18,7 @@ const styles: Header = {
     margin: "0",
     padding: "0",
   },
-  highlight: {
+  contact: {
     backgroundColor: palette.primary.main,
     borderRadius: "4px",
     textAlign: "center",

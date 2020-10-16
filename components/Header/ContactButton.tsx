@@ -4,17 +4,17 @@ import animation from "../../theme/animation";
 import { StyledLink } from "./Link";
 import styles from "./styles";
 
-const { highlight } = styles;
+const { contact } = styles;
 
 export const StyledHighlight = styled(StyledLink)`
-  background: ${highlight.backgroundColor};
-  border-radius: ${highlight.borderRadius};
-  text-align: ${highlight.textAlign};
-  color: ${highlight.color};
+  background: ${contact.backgroundColor};
+  border-radius: ${contact.borderRadius};
+  text-align: ${contact.textAlign};
+  color: ${contact.color};
   transition: ${animation.transition};
   &:hover {
-    background: ${highlight.hoverColor};
-    text-decoration: ${highlight.textDecoration};
+    background: ${contact.hoverColor};
+    text-decoration: ${contact.textDecoration};
   }
 `;
 
