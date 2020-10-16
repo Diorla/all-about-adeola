@@ -37,6 +37,7 @@ declare module "styled-components" {
       mdDirection: string;
       mdJustifyContent: string;
       mdPosition: string;
+      width: string;
     };
   }
   export interface Breakpoints {

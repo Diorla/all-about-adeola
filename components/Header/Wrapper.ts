@@ -13,7 +13,8 @@ export default styled.div`
   z-index: ${main.zIndex};
   background: ${main.backgroundColor};
   box-shadow: ${main.boxShadow};
-  @media screen and (max-width: ${main.breakpoint}) {
+  width: ${main.width};
+   @media screen and (max-width: ${main.breakpoint}) {
     flex-direction: ${main.mdDirection};
     justify-content: ${main.mdJustifyContent};
     position: ${main.mdPosition};

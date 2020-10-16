@@ -31,7 +31,7 @@ const styles: Header = {
     justifyContent: "space-between",
     padding: "8px",
     alignItems: "center",
-    position: "sticky",
+    position: "fixed",
     top: 0,
     zIndex: priority.header,
     backgroundColor: "white",
@@ -39,7 +39,8 @@ const styles: Header = {
     breakpoint: breakpoints.md,
     mdDirection: "column",
     mdJustifyContent: "space-evenly",
-    mdPosition: "relative",
+    mdPosition: "absolute",
+    width: "100%",
   },
 };
 
