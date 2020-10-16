@@ -26,3 +26,6 @@ yarn-error.log*
 
 # testing
 test
+
+# personalisation
+.vscode
