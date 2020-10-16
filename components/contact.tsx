@@ -6,7 +6,7 @@ export default () => (
     <div>
       <div className="message">
         If you have a question, interested in my service or just want to say hi,{" "}
-        <a href="mailto:contact@adeolaade.com">Send me an email</a> and I'll try
+        <a href="mailto:adedotster@gmail.com">Send me an email</a> and I'll try
         my best to get back to you!
       </div>
     </div>
