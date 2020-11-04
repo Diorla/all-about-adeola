@@ -28,7 +28,9 @@ const StyledWeblink = styled.div<{ delay: number }>`
 export default (web: link) => {
   return (
     <StyledWeblink delay={web.delay}>
-      <a href={web.address}>{web.title}</a>
+      <a href={web.address} target="_blank" rel="noreferrer">
+        {web.title}
+      </a>
       <div>{web.description}</div>
       <div>
         {web.tags.map((item, idx) => (

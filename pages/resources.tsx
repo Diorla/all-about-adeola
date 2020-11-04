@@ -23,19 +23,35 @@ export default ({ resources }: { resources: Link[] }) => {
           <h1>Credits</h1>
           <div>
             I got the lovely svg drawings from{" "}
-            <a href="https://undraw.co/">undraw</a>
+            <a href="https://undraw.co/" target="_blank" rel="noreferrer">
+              undraw
+            </a>
           </div>
           <div>
             For the patterned backgrounds, check out{" "}
-            <a href="http://www.heropatterns.com/">Hero patterns</a>
+            <a
+              href="http://www.heropatterns.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Hero patterns
+            </a>
           </div>
           <div>
             Landing page image by{" "}
-            <a href="https://pixabay.com/users/creativemagic-480360/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3227459">
+            <a
+              href="https://pixabay.com/users/creativemagic-480360/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3227459"
+              target="_blank"
+              rel="noreferrer"
+            >
               Magic Creative
             </a>{" "}
             from{" "}
-            <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3227459">
+            <a
+              href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3227459"
+              target="_blank"
+              rel="noreferrer"
+            >
               Pixabay
             </a>
           </div>
