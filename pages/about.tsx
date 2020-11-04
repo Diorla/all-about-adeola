@@ -22,9 +22,16 @@ const Icon = styled.div`
   display: flex;
   align-items: center;
 `;
+
+const Wrapper = styled.main`
+  margin-top: 60px;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    margin-top: 120px;
+  }
+`;
 export default () => (
   <Layout>
-    <main>
+    <Wrapper>
       <div className="section one">
         <div>
           <img src="avatar.jpg" alt="Ade Adeola" />
@@ -232,6 +239,6 @@ export default () => (
           }
         }
       `}</style>
-    </main>
+    </Wrapper>
   </Layout>
 );
