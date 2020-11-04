@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import animation from "../../theme/animation";
+import timing from "../../theme/timing";
 import { StyledLink } from "./Link";
 import styles from "./styles";
 
@@ -12,7 +12,7 @@ export const StyledHighlight = styled(StyledLink)`
   border-radius: ${contact.borderRadius};
   text-align: ${contact.textAlign};
   color: ${contact.color};
-  transition: ${animation.transition};
+  transition: ${timing.transition};
   &:hover {
     background: ${contact.hoverColor};
     text-decoration: ${contact.textDecoration};
