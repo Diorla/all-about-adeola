@@ -34,9 +34,9 @@ const SlideDiv = styled.div`
   margin-bottom: 16px;
   position: absolute;
   background: rgba(255, 255, 255, 0.99);
-  transform-origin: bottom;
+  transform-origin: top;
   transform: scaleY(0);
-  transition: 0.3s linear;
+  transition: 0.3s cubic-bezier(0, 1.3, 1, 0.21);
   padding: 16px;
   display: flex;
   justify-content: space-around;
