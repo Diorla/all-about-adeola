@@ -3,6 +3,14 @@ import Header from "./Header";
 import Footer from "./footer";
 import Container from "./container";
 import { ReactNode } from "react";
+import styled from "styled-components";
+
+const Wrapper = styled.main`
+  margin-top: 60px;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    margin-top: 120px;
+  }
+`;
 
 export default function Layout(props: { children: ReactNode; title?: string }) {
   const { children, title = "Adeola Ade" } = props;
@@ -40,7 +48,7 @@ export default function Layout(props: { children: ReactNode; title?: string }) {
         />
       </Head>
       <Header />
-      {children}
+      <Wrapper>{children}</Wrapper>
       <Footer />
     </Container>
   );
