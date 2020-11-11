@@ -199,5 +199,50 @@
       "websites",
       "converter"
     ]
+  },
+  {
+    "title": "NPM compare",
+    "description": "Compare and score two or more npm packages using several stats",
+    "address": "https://npmcompare.com/",
+    "tags": [
+      "npm",
+      "packages",
+      "compare",
+      "dependencies",
+      "stats"
+    ]
+  },
+  {
+    "title": "NPM trends",
+    "description": "Graph showing the download trends(rates and changes) over time.",
+    "address": "https://www.npmtrends.com/",
+    "tags": [
+      "npm",
+      "packages",
+      "compare",
+      "dependencies",
+      "stats"
+    ]
+  },
+  {
+    "title": "Accessible colours",
+    "description": "Test colours for accessibility.",
+    "address": "https://accessible-colors.com/",
+    "tags": [
+      "tools",
+      "colour",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Epoch converter",
+    "description": "Converts to various time format, timestamps, human readable format, different locale",
+    "address": "https://www.epochconverter.com/",
+    "tags": [
+      "tools",
+      "time",
+      "locale",
+      "internalisation"
+    ]
   }
 ]
