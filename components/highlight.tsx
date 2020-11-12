@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Bounce from "./bounce";
+import Fade from "./fade";
 
 interface HighlightProps {
   name: string;
@@ -8,52 +8,48 @@ interface HighlightProps {
   img: string;
   description: string;
 }
-const StyledDiv = styled.div`
+
+const StyledDiv = styled.div<{ img: string }>`
+  width: max(320px, min(100%, 720px));
+  width: clamp(320px, 100%, 720px);
   height: 480px;
-  max-width: 720px;
-  width: 100%;
   box-shadow: 0 0 6px;
-  &:hover > div {
-    transform: scale(1);
-  }
-`;
-const BaseDiv = styled.div<{ img: string }>`
-  background-image: url(${(props) => props.img});
-  height: 480px;
-  max-width: 720px;
-  width: 100%;
-  margin-bottom: 16px;
-  position: absolute;
-  background-position: center;
+  background-image: ${(props) => "url(" + props.img + ")"};
   background-size: cover;
+  background-position: center;
 `;
-const SlideDiv = styled.div`
-  height: 480px;
-  max-width: 720px;
-  width: 100%;
-  margin-bottom: 16px;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.99);
-  transform-origin: top;
-  transform: scaleY(0);
-  transition: 0.3s cubic-bezier(0, 1.3, 1, 0.21);
-  padding: 16px;
+
+const ContentDiv = styled.div`
   display: flex;
+  background: #008080e6;
+  color: white;
+  opacity: 0;
+  transition: 0.2s linear;
+  height: 100%;
   justify-content: space-around;
   align-items: center;
+  transform: translateY(-20px);
+  text-align: center;
+  &:hover {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+const StyledLink = styled.div`
+  margin-bottom: 32px;
 `;
 const Highlight = ({ name, link, img, description }: HighlightProps) => (
-  <Bounce>
-    <StyledDiv>
-      <BaseDiv img={img}></BaseDiv>
-      <SlideDiv>{description}</SlideDiv>
+  <Fade>
+    <StyledDiv img={img}>
+      <ContentDiv>{description}</ContentDiv>
     </StyledDiv>
-    <div style={{ marginBottom: 32 }}>
+    <StyledLink>
       <a href={link} target="_blank" rel="noreferrer">
         {name}
       </a>
-    </div>
-  </Bounce>
+    </StyledLink>
+  </Fade>
 );
 
 export default Highlight;
