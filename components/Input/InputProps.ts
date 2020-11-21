@@ -1,4 +1,4 @@
-export default interface InputProps  {
+export default interface InputProps {
   /**
    * id for input and label
    */
@@ -16,11 +16,13 @@ export default interface InputProps  {
    */
   onChange?: (e: { target: { value: React.SetStateAction<string> } }) => void;
   /**
-   * Placeholder
-   */
-  placeholder?: string;
-  /**
    * One of various input types
    */
   type?: string;
+  /**
+   * chooses between input or textarea
+   */
+  multiline?: boolean;
+  // required?: boolean;
+  [props: string]: any;
 }
