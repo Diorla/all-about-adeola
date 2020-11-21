@@ -73,7 +73,7 @@ export default () => {
       <StyledLeft>
         <StyledMessage>
           If you have a question, interested in my service or just want to say
-          hi, Send me an email
+          hi, send me an email.
         </StyledMessage>
       </StyledLeft>
       <StyledRight>
@@ -90,7 +90,13 @@ export default () => {
             required
             placeholder="John Doe"
           />
-          <Input label="Email" type="email" name="email" placeholder="example@email.com" required />
+          <Input
+            label="Email"
+            type="email"
+            name="email"
+            placeholder="example@email.com"
+            required
+          />
           <Input
             label="Message"
             type="text"
