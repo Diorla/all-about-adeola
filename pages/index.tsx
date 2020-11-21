@@ -119,7 +119,9 @@ export default function Home() {
             background-position: right;
             background-size: cover;
             background-blend-mode: hard-light;
-            height: 100vh;
+            height: 50vh;
+            min-height: 480px;
+            margin-top: -20px;
             justify-content: space-around;
             background-position: center;
           }
