@@ -65,10 +65,10 @@ export default ({ resources }: { resources: Link[] }) => {
           </h1>
           <div className="search-input">
             <Input
-              label="filter links"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               type="search"
+              placeholder="Filter"
             />
           </div>
           <div className="resources">
