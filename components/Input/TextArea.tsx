@@ -7,6 +7,8 @@ export default styled.textarea`
   padding: 4px 8px;
   outline: none;
   resize: vertical;
+  background: transparent;
+  color: #ffffff;
   &:focus {
     box-shadow: inset 0 0 2px;
   }
@@ -15,5 +17,6 @@ export default styled.textarea`
   }
   &::placeholder {
     font-style: italic;
+    color: rgb(255 255 255 / 70%);
   }
 `;

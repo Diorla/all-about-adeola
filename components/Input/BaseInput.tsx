@@ -6,6 +6,8 @@ export default styled.input`
   box-shadow: inset 0 0 2px black;
   padding: 4px 8px;
   outline: none;
+  background: transparent;
+  color: #ffffff;
   &:focus {
     box-shadow: inset 0 0 2px;
   }
@@ -14,5 +16,6 @@ export default styled.input`
   }
   &::placeholder {
     font-style: italic;
+    color: rgb(255 255 255 / 70%);
   }
 `;

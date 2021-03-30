@@ -1,21 +1,13 @@
 import Head from "next/head";
-import Header from "./Header";
-import Footer from "./footer";
-import Container from "./container";
-import { ReactNode } from "react";
-import styled from "styled-components";
+import Wrapper from "./Wrapper";
 
-const Wrapper = styled.main`
-  margin-top: 60px;
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
-    margin-top: 120px;
-  }
-`;
-
-export default function Layout(props: { children: ReactNode; title?: string }) {
+export default function Layout(props: {
+  children: React.ReactNode;
+  title?: string;
+}) {
   const { children, title = "Adeola Ade" } = props;
   return (
-    <Container>
+    <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Welcome to Adeola Ade website." />
@@ -37,9 +29,7 @@ export default function Layout(props: { children: ReactNode; title?: string }) {
           rel="stylesheet"
         />
       </Head>
-      <Header />
       <Wrapper>{children}</Wrapper>
-      <Footer />
-    </Container>
+    </>
   );
 }
