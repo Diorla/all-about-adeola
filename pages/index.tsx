@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 
 const Main = styled.div`
   position: fixed;
-  bottom: 150px;
+  bottom: 20vh;
   color: white;
   padding: 12px;
   & > h1 {
