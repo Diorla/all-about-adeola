@@ -1,11 +1,11 @@
-import Layout from "../components/layout";
 import Weblink from "../components/weblink";
-import Contact from "../components/contact";
 import { GetStaticProps } from "next";
 import path from "path";
 import fs from "fs";
-import { useState } from "react";
+import React, { useState } from "react";
 import Input from "../components/Input";
+import Layout from "../components/Layout";
+import styled from "styled-components";
 
 interface Link {
   title: string;
@@ -14,54 +14,58 @@ interface Link {
   tags: string[];
 }
 
+const CreditLink = styled.a`
+  color: #b2dfdb;
+  font-weight: 500;
+`;
+
+const Subtitle = styled.span`
+  color: white;
+  font-size: 15px;
+`;
+
 export default ({ resources }: { resources: Link[] }) => {
   const [search, setSearch] = useState("");
   return (
-    <Layout>
+    <Layout active="resources">
       <main>
         <section>
           <h1>Credits</h1>
           <div>
-            I got the lovely svg drawings from{" "}
-            <a href="https://undraw.co/" target="_blank" rel="noreferrer">
-              undraw
-            </a>
-          </div>
-          <div>
-            For the patterned backgrounds, check out{" "}
-            <a
-              href="http://www.heropatterns.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Hero patterns
-            </a>
-          </div>
-          <div>
-            Landing page image by{" "}
-            <a
+            Icons from{" "}
+            <CreditLink
               href="https://pixabay.com/users/creativemagic-480360/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3227459"
               target="_blank"
               rel="noreferrer"
             >
-              Magic Creative
-            </a>{" "}
+              React-icons
+            </CreditLink>
+          </div>
+          <div>
+            Background image by{" "}
+            <CreditLink
+              href="https://pixabay.com/users/chenspec-7784448/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6010961"
+              target="_blank"
+              rel="noreferrer"
+            >
+              chenspec
+            </CreditLink>{" "}
             from{" "}
-            <a
-              href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3227459"
+            <CreditLink
+              href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6010961"
               target="_blank"
               rel="noreferrer"
             >
               Pixabay
-            </a>
+            </CreditLink>
           </div>
         </section>
         <section>
           <h1>
             Resources
-            <span>
+            <Subtitle>
               Below are some of the important links to sites that I find helpful
-            </span>
+            </Subtitle>
           </h1>
           <div className="search-input">
             <Input
@@ -86,12 +90,15 @@ export default ({ resources }: { resources: Link[] }) => {
                 ))}
           </div>
         </section>
-        <Contact />
       </main>
       <style jsx>{`
         main {
           flex: 1;
           padding: 8px;
+          color: white;
+        }
+        main input {
+          background: black;
         }
         h1 {
           text-align: center;
