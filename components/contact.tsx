@@ -51,7 +51,7 @@ const StyledButton = styled.button`
 const StyledError = styled.div`
   color: red;
 `;
-export default () => {
+const Contact = () => {
   const [status, setStatus] = useState("");
   return (
     <StyledForm
@@ -93,3 +93,5 @@ export default () => {
     </StyledForm>
   );
 };
+
+export default Contact;

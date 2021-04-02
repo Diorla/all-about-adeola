@@ -14,7 +14,7 @@ export const StyledLink = styled.a<{ active?: boolean }>`
   }
 `;
 
-export default ({
+const HeaderLink = ({
   href,
   title,
   active,
@@ -27,3 +27,5 @@ export default ({
     <StyledLink active={active}>{title}</StyledLink>
   </Link>
 );
+
+export default HeaderLink;

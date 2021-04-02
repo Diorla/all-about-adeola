@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 
-export default () => (
+const ErrorPage = () => (
   <main>
     <Head>
       <link
@@ -57,3 +57,5 @@ export default () => (
     `}</style>
   </main>
 );
+
+export default ErrorPage;

@@ -102,7 +102,7 @@ const SectionThree = styled(Section)`
     text-align: center;
   }
 `;
-export default () => (
+const About = () => (
   <Layout active="about">
     <SectionOne>
       <div>
@@ -228,3 +228,5 @@ export default () => (
     </SectionThree>
   </Layout>
 );
+
+export default About;

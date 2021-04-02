@@ -26,10 +26,12 @@ export const StyledLogo = styled(StyledLink)`
   }
 `;
 
-export default () => (
+const Logo = () => (
   <Link href="/">
     <StyledLogo>
       <span>{"<"}</span>Code<span>{" />"}</span>
     </StyledLogo>
   </Link>
 );
+
+export default Logo;
