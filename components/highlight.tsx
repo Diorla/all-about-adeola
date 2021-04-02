@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   width: 320px;
   background: white;
-  margin-bottom: 8px;
+  margin: 8px;
 `;
 
 const Header = styled.a<{ image: string }>`

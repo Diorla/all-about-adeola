@@ -22,6 +22,60 @@ const works = [
     img: "images/linker.svg",
     description: "Cross browser, cross platform web bookmarking",
   },
+  {
+    name: "Leadership",
+    link: "https://leadership.vercel.app/",
+    img: "images/leadership.jpeg",
+    description: "Leadership and management tools",
+  },
+  {
+    name: "Image converter",
+    link: "https://image-converter.adeolaade.com/",
+    img: "images/image-converter.jpeg",
+    description: "Convert and resize images",
+  },
+  {
+    name: "App icons",
+    link: "https://dribbble.com/shots/14631173-App-icons",
+    img: "images/app-icons.jpg",
+    description: "Mobile theme app icons",
+  },
+  {
+    name: "Social app",
+    link: "https://dribbble.com/shots/14835363-user-profile",
+    img: "images/profile.jpg",
+    description: "User profile page in a mobile app",
+  },
+  {
+    name: "E-commerce app",
+    link: "https://dribbble.com/shots/14597485-Credit-card-checkout",
+    img: "images/checkout.jpg",
+    description: "Checkout page in a mobile app",
+  },
+  {
+    name: "Mortgage calculator",
+    link: "https://dribbble.com/shots/14616342-mortgage-calculator",
+    img: "images/mortgage-calculator.jpg",
+    description: "Calculate monthly payment",
+  },
+  {
+    name: "Digit-all",
+    link: "https://dribbble.com/shots/14616342-mortgage-calculator",
+    img: "images/digit-all.jpeg",
+    description: "Calculate monthly payment",
+  },
+  {
+    name: "Puzzle",
+    link: "https://codepen.io/Diorla/full/WZZEpE",
+    img: "images/puzzle.jpeg",
+    description: "Solve the puzzle in record time",
+  },
+  {
+    name: "Calculator",
+    link: "https://codepen.io/Diorla/full/borwJx",
+    img: "images/calculator.jpeg",
+    description: "Calculator with multiple themes",
+  },
 ];
 
 const ShowcaseDiv = styled.main`
