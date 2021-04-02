@@ -12,15 +12,24 @@ export const StyledLogo = styled(StyledLink)`
   padding: ${logo.padding};
   color: white;
   font-weight: bold;
+  & > span {
+    opacity: 0;
+    transition: 0.2s linear;
+  }
   &:hover {
     text-shadow: 0 0 2px black;
     transform: none;
     font-weight: bolder;
   }
+  &:hover > span {
+    opacity: 1;
+  }
 `;
 
 export default () => (
   <Link href="/">
-    <StyledLogo>{`<Code />`}</StyledLogo>
+    <StyledLogo>
+      <span>{"<"}</span>Code<span>{" />"}</span>
+    </StyledLogo>
   </Link>
 );

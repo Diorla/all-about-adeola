@@ -74,7 +74,7 @@ const works = [
     name: "Digit-all",
     link: "https://dribbble.com/shots/14616342-mortgage-calculator",
     img: "images/digit-all.jpeg",
-    description: "Calculate monthly payment",
+    description: "All your electronics here",
     website,
   },
   {
