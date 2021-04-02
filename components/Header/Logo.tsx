@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { StyledLink } from "./Link";
@@ -11,9 +10,6 @@ export const StyledLogo = styled(StyledLink)`
   font-size: 28px;
   margin: ${logo.margin};
   padding: ${logo.padding};
-  z-index: 100000;
-  position: absolute;
-  left: 8px;
   color: white;
   font-weight: bold;
   &:hover {
