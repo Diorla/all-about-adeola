@@ -1,5 +1,26 @@
 [
   {
+    "title": "Undraw",
+    "description": "Beautiful SVG images",
+    "address": "https://undraw.co/",
+    "tags": [
+      "svg",
+      "image",
+      "png"
+    ]
+  },
+  {
+    "title": "Hero patterns",
+    "description": "Patterned background images",
+    "address": "http://www.heropatterns.com/",
+    "tags": [
+      "patterns",
+      "svg",
+      "background",
+      "image"
+    ]
+  },
+  {
     "title": "Material colours",
     "description": "Material interactive colour palette",
     "address": "https://material.io/tools/color/",
