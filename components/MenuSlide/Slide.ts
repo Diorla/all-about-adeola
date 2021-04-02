@@ -19,14 +19,21 @@ const slideUp = keyframes`
 `;
 
 const Slide = styled.div`
-  position: absolute;
-  min-height: 100vh;
-  width: 100vw;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  width: 100%;
   transform-origin: top;
   background-color: teal;
   transform-origin: top;
   z-index: 1000;
   color: white;
+  @media screen and (max-height: 520px) {
+    overflow-y: scroll;
+  }
+  @media screen and (max-width: 450px) {
+    overflow-y: scroll;
+  }
 `;
 
 const SlideUp = styled(Slide)`

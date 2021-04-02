@@ -4,8 +4,9 @@ import Wrapper from "./Wrapper";
 export default function Layout(props: {
   children: React.ReactNode;
   title?: string;
+  active: string;
 }) {
-  const { children, title = "Adeola Ade" } = props;
+  const { children, title = "Adeola Ade", active } = props;
   return (
     <>
       <Head>
@@ -29,7 +30,7 @@ export default function Layout(props: {
           rel="stylesheet"
         />
       </Head>
-      <Wrapper>{children}</Wrapper>
+      <Wrapper active={active}>{children}</Wrapper>
     </>
   );
 }
