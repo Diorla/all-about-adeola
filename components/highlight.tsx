@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Fade from "./fade";
 
 interface HighlightProps {
   name: string;
@@ -9,47 +8,65 @@ interface HighlightProps {
   description: string;
 }
 
-const StyledDiv = styled.div<{ img: string }>`
-  width: max(320px, min(100%, 720px));
-  width: clamp(320px, 100%, 720px);
-  height: 480px;
-  box-shadow: 0 0 6px;
-  background-image: ${(props) => "url(" + props.img + ")"};
-  background-size: cover;
-  background-position: center;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  background: white;
+  margin-bottom: 8px;
 `;
 
-const ContentDiv = styled.div`
-  display: flex;
-  background: #008080e6;
-  color: white;
-  opacity: 0;
-  transition: 0.2s linear;
-  height: 100%;
-  justify-content: space-around;
-  align-items: center;
-  transform: translateY(-20px);
-  text-align: center;
+const Header = styled.a<{ image: string }>`
+  background-image: ${({ image }) => "url(" + image + ")"};
+  display: inline-flex;
+  height: 200px;
+  width: 320px;
+  display: relative;
+  background-position: center;
+  background-size: cover;
+  transition: 0.4s linear;
+  background-blend-mode: multiply;
   &:hover {
-    opacity: 1;
-    transform: translateY(0);
+    background-color: teal;
   }
 `;
 
-const StyledLink = styled.div`
-  margin-bottom: 32px;
+const Caption = styled.div`
+  height: 60px;
+  text-align: center;
 `;
-const Highlight = ({ name, link, img, description }: HighlightProps) => (
-  <Fade>
-    <StyledDiv img={img}>
-      <ContentDiv>{description}</ContentDiv>
-    </StyledDiv>
-    <StyledLink>
-      <a href={link} target="_blank" rel="noreferrer">
-        {name}
-      </a>
-    </StyledLink>
-  </Fade>
-);
+
+const Title = styled.div`
+  font-weight: bolder;
+  color: #004d40;
+`;
+
+const Description = styled.div`
+  color: #4c4949;
+  font-style: italic;
+`;
+
+const Temp = styled.div`
+  position: absolute;
+  background: red;
+`;
+
+const Highlight = ({ name, link, img, description }: HighlightProps) => {
+  const title = description.length > 30 ? description : "";
+  return (
+    <Wrapper>
+      <Header href={link} target="_blank" rel="noreferrer" image={img}>
+        <Temp />
+      </Header>
+      <Caption title={title}>
+        <Title>{name}</Title>
+        <Description>
+          {description.substr(0, 30)}
+          {description.length > 30 && "..."}
+        </Description>
+      </Caption>
+    </Wrapper>
+  );
+};
 
 export default Highlight;

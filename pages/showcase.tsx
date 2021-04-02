@@ -1,7 +1,7 @@
-import Layout from "../components/layout";
 import Highlight from "../components/highlight";
-import Contact from "../components/contact";
 import styled from "styled-components";
+import React from "react";
+import Layout from "../components/Layout";
 
 const works = [
   {
@@ -30,14 +30,13 @@ const ShowcaseDiv = styled.main`
   flex-wrap: wrap;
 `;
 export default () => (
-  <Layout>
-    <h2>These are some of my projects</h2>
+  <Layout active="showcase">
+    <h2 style={{ color: "white" }}>These are some of my projects</h2>
     <ShowcaseDiv>
       {works.map((item, idx) => (
         <Highlight key={idx} {...item} />
       ))}
     </ShowcaseDiv>
-    <Contact />
     <style jsx>{`
       h2 {
         font-weight: bold;
