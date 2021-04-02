@@ -1,11 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import { FaAppStore, FaApple, FaWindows, FaGooglePlay } from "react-icons/fa";
+import { AiOutlineGlobal } from "react-icons/ai";
 
 interface HighlightProps {
   name: string;
   link: string;
   img: string;
   description: string;
+  website?: boolean;
+  pc?: boolean;
+  mobile?: boolean;
 }
 
 const Wrapper = styled.div`
@@ -27,6 +32,7 @@ const Header = styled.a<{ image: string }>`
   transition: 0.4s linear;
   background-blend-mode: multiply;
   &:hover {
+    text-decoration: none;
     background-color: teal;
   }
 `;
@@ -47,16 +53,51 @@ const Description = styled.div`
 `;
 
 const Temp = styled.div`
-  position: absolute;
-  background: red;
+  color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  background: teal;
+  transition: 0.3s linear;
+  &:hover {
+    opacity: 1;
+  }
 `;
 
-const Highlight = ({ name, link, img, description }: HighlightProps) => {
+const Highlight = ({
+  name,
+  link,
+  img,
+  description,
+  website,
+  pc,
+  mobile,
+}: HighlightProps) => {
   const title = description.length > 30 ? description : "";
   return (
     <Wrapper>
       <Header href={link} target="_blank" rel="noreferrer" image={img}>
-        <Temp />
+        <Temp>
+          {website && (
+            <>
+              <AiOutlineGlobal />
+            </>
+          )}
+          {pc && (
+            <>
+              <FaApple />
+              <FaWindows />
+            </>
+          )}
+          {mobile && (
+            <>
+              <FaAppStore />
+              <FaGooglePlay />
+            </>
+          )}
+        </Temp>
       </Header>
       <Caption title={title}>
         <Title>{name}</Title>
