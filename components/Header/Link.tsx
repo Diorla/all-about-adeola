@@ -1,19 +1,29 @@
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import styles from "./styles";
 
-const { link } = styles;
-
-export const StyledLink = styled.a`
-  color: ${link.color};
-  cursor: ${link.cursor};
-  margin: ${link.margin};
-  padding: ${link.padding};
+export const StyledLink = styled.a<{ active?: boolean }>`
+  color: ${({ active }) => (active ? "#ffffff" : "#ffffffcc")};
+  font-size: 48px;
+  transition: 0.3s linear;
+  transform-origin: top;
+  &:hover {
+    text-decoration: none;
+    color: #ffffff;
+    transform: skewY(5deg);
+  }
 `;
 
-export default ({ href, title }: { href: string; title: string }) => (
+export default ({
+  href,
+  title,
+  active,
+}: {
+  href: string;
+  title: string;
+  active?: boolean;
+}) => (
   <Link href={href}>
-    <StyledLink>{title}</StyledLink>
+    <StyledLink active={active}>{title}</StyledLink>
   </Link>
 );

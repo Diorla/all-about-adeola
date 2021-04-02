@@ -1,21 +1,14 @@
 import Head from "next/head";
-import Header from "./Header";
-import Footer from "./footer";
-import Container from "./container";
-import { ReactNode } from "react";
-import styled from "styled-components";
+import Wrapper from "./Wrapper";
 
-const Wrapper = styled.main`
-  margin-top: 60px;
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
-    margin-top: 120px;
-  }
-`;
-
-export default function Layout(props: { children: ReactNode; title?: string }) {
-  const { children, title = "Adeola Ade" } = props;
+export default function Layout(props: {
+  children: React.ReactNode;
+  title?: string;
+  active: string;
+}) {
+  const { children, title = "Adeola Ade", active } = props;
   return (
-    <Container>
+    <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Welcome to Adeola Ade website." />
@@ -36,20 +29,8 @@ export default function Layout(props: { children: ReactNode; title?: string }) {
           href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap"
           rel="stylesheet"
         />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-        />
       </Head>
-      <Header />
-      <Wrapper>{children}</Wrapper>
-      <Footer />
-    </Container>
+      <Wrapper active={active}>{children}</Wrapper>
+    </>
   );
 }

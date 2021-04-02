@@ -134,6 +134,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  cursor: url("../public/cursor/ignite.svg"), auto;
 }
 
 * {
@@ -143,6 +144,7 @@ body {
 a {
   color: #0070f3;
   text-decoration: none;
+  cursor: url("../public/cursor/pointer.svg"), text;
 }
 
 a:hover {
@@ -155,4 +157,16 @@ html {
 .carousel {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 0.5em;
+}
+
+button {
+  cursor: url("../public/cursor/pointer.svg"), pointer;
+}
+
+input, textarea {
+  cursor: url("../public/cursor/text.svg"), text;
+}
+
+label {
+  cursor: url("../public/cursor/auto.svg"), auto;
 }

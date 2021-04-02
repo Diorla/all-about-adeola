@@ -7,6 +7,7 @@ interface link {
   tags: string[];
   delay: number;
 }
+
 const showElement = keyframes`
   0% {
     opacity: 0;
@@ -23,7 +24,21 @@ const StyledWeblink = styled.div<{ delay: number }>`
   opacity: 0;
   background: white;
   margin: 4px;
+  color: black;
+  background-color: wheat;
   animation: ${showElement} 0.2s ease ${(props) => props.delay}s 1 forwards;
+  & > a {
+    color: #01579b;
+  }
+`;
+
+const Tag = styled.span`
+  margin: 4px;
+  font-style: italic;
+  text-transform: lowercase;
+  &::before {
+    content: "-";
+  }
 `;
 export default (web: link) => {
   return (
@@ -34,19 +49,9 @@ export default (web: link) => {
       <div>{web.description}</div>
       <div>
         {web.tags.map((item, idx) => (
-          <span key={idx}>{item}</span>
+          <Tag key={idx}>{item}</Tag>
         ))}
       </div>
-      <style jsx>{`
-        span {
-          margin: 4px;
-          font-style: italic;
-          text-transform: lowercase;
-        }
-        span::before {
-          content: "-";
-        }
-      `}</style>
     </StyledWeblink>
   );
 };

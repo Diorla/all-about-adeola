@@ -1,5 +1,3 @@
-import Layout from "../components/layout";
-import Contact from "../components/contact";
 import {
   SiAdobexd,
   SiCss3,
@@ -12,9 +10,12 @@ import {
   SiReact,
   SiTypescript,
   SiWire,
+  SiElectron,
+  SiMaterialUi,
 } from "react-icons/si";
-import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import Layout from "../components/Layout";
+import FloatingImage from "../components/FloatingImage";
 
 const Icon = styled.div`
   color: ${(props) => props.color};
@@ -23,11 +24,89 @@ const Icon = styled.div`
   align-items: center;
 `;
 
+const Section = styled.div`
+  display: flex;
+  background: transparent;
+`;
+
+const SectionOne = styled(Section)`
+  color: white;
+  text-shadow: 0 0 1px black;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  & div {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    padding: 4px;
+    min-width: 240px;
+  }
+  & > div {
+    justify-content: space-around;
+  }
+  & ul {
+    font-family: "Baloo Tamma 2", cursive;
+  }
+`;
+
+const backgroundAnimation = keyframes`
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+`;
+
+const SectionTwo = styled(Section)`
+  height: 210px;
+  align-items: center;
+  justify-content: space-around;
+  font-family: cursive;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+  background: linear-gradient(218deg, #e0f2f1, #008080);
+  background-size: 400% 400%;
+  animation: ${backgroundAnimation} 20s ease infinite;
+`;
+
+const SectionThree = styled(Section)`
+  flex-direction: column;
+  & > div {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-weight: 500;
+  }
+  & ul {
+    background: rgb(255 255 255 / 80%);
+    width: 150px;
+    text-align: center;
+    margin: 4px;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  & li {
+    margin: 16px;
+    display: flex;
+    align-items: center;
+  }
+  & h1 {
+    font-weight: bold;
+    border-bottom: 1px solid white;
+    text-align: center;
+  }
+`;
 export default () => (
-  <Layout>
-    <div className="section one">
+  <Layout active="about">
+    <SectionOne>
       <div>
-        <img src="avatar.jpg" alt="Ade Adeola" />
+        <FloatingImage />
       </div>
       <div>
         <ul>
@@ -45,8 +124,8 @@ export default () => (
           </li>
         </ul>
       </div>
-    </div>
-    <div className="section two">
+    </SectionOne>
+    <SectionTwo>
       <ul>
         <li>Mobile first developer</li>
         <li>Responsive design</li>
@@ -55,8 +134,8 @@ export default () => (
         <li>Cross browser tested website</li>
         <li>Clean code and best practices</li>
       </ul>
-    </div>
-    <div className="section three">
+    </SectionTwo>
+    <SectionThree>
       <h1>Tools</h1>
       <div>
         <ul>
@@ -132,105 +211,20 @@ export default () => (
             </Icon>
             Chrome DevTools
           </li>
+          <li>
+            <Icon color="#172b4d">
+              <SiElectron />
+            </Icon>
+            Electron
+          </li>
+          <li>
+            <Icon color="#00b0ff">
+              <SiMaterialUi />
+            </Icon>
+            Material-UI
+          </li>
         </ul>
       </div>
-      <Contact />
-    </div>
-    <style jsx>{`
-      .section {
-        display: flex;
-      }
-      .one {
-        width: 100%;
-        flex-wrap: wrap;
-        margin: 20px 0;
-      }
-      .one div {
-        display: flex;
-        flex: 1;
-        align-items: center;
-        padding: 4px;
-        min-width: 240px;
-      }
-      .one img {
-        height: 240px;
-        width: 240px;
-        border-radius: 4px;
-        padding: 8px;
-        box-shadow: 0 0 4px -1px black;
-      }
-      .one > div {
-        justify-content: space-around;
-      }
-      .one ul {
-        font-family: "Baloo Tamma 2", cursive;
-      }
-      .two {
-        height: 210px;
-        align-items: center;
-        justify-content: space-around;
-        font-family: cursive;
-        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
-      }
-      .three {
-        flex-direction: column;
-      }
-      .three > div {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        font-weight: 500;
-      }
-      .three ul {
-        width: 150px;
-        text-align: center;
-        margin: 4px;
-        border-bottom: 1px solid teal;
-        display: flex;
-        flex: 1;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-      }
-      .three li {
-        margin: 16px;
-        display: flex;
-        align-items: center;
-      }
-      .three h1 {
-        font-weight: bold;
-        border-bottom: 1px solid teal;
-        text-align: center;
-      }
-      .two {
-        background: linear-gradient(218deg, #e0f2f1, #008080);
-        background-size: 400% 400%;
-        animation: backgroundAnimation 20s ease infinite;
-      }
-      @keyframes backgroundAnimation {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-      img {
-        animation: imgRotation 40s linear infinite;
-      }
-      @keyframes imgRotation {
-        0% {
-          transform: rotate(10deg);
-        }
-        50% {
-          transform: rotate(-10deg);
-        }
-        100% {
-          transform: rotate(10deg);
-        }
-      }
-    `}</style>
+    </SectionThree>
   </Layout>
 );
