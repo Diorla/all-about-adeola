@@ -1,12 +1,10 @@
-import React, { useState } from "react";
 import styled from "styled-components";
 import Layout from "../components/Layout";
 
 const Main = styled.div`
   position: fixed;
-  bottom: 20vh;
+  bottom: 30vh;
   color: white;
-  padding: 12px;
   & > h1 {
     font-size: 48px;
     line-height: 28px;
@@ -20,7 +18,7 @@ const Main = styled.div`
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout active="home">
       <Main>
         <h1>Web developer</h1>
         <p>Design, Develop, Create something beautiful</p>
