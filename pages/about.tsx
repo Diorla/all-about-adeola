@@ -103,7 +103,12 @@ const SectionThree = styled(Section)`
   }
 `;
 const About = () => (
-  <Layout active="about">
+  <Layout
+    active="about"
+    title="Ade Adeola - About"
+    canonical="/about"
+    description="Learn more about Adeola"
+  >
     <SectionOne>
       <div>
         <FloatingImage />

@@ -1,6 +1,9 @@
 import { MorphReplace } from "react-svg-morph";
 import styled from "styled-components";
-
+/**
+ * // TODO: Use SVG animation
+ * replace react-svg-morph with svg-css animation
+ */
 const Menu = () => (
   <svg width="12" fill="#fff" height="12" viewBox="0 0 24 24">
     <path

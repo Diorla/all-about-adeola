@@ -27,7 +27,12 @@ const Subtitle = styled.span`
 const Resources = ({ resources }: { resources: Link[] }) => {
   const [search, setSearch] = useState("");
   return (
-    <Layout active="resources">
+    <Layout
+      active="resources"
+      title="Ade Adeola - Resources"
+      canonical="/resources"
+      description="Some resources I used as a developer"
+    >
       <main>
         <section>
           <h1>Credits</h1>

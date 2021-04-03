@@ -12,6 +12,7 @@ const ErrorPage = () => (
         href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap"
         rel="stylesheet"
       />
+      <title>Ade Adeola - 404</title>
     </Head>
     <div className="error">
       Oh Snap! We've searched everywhere but couldn't find the page.

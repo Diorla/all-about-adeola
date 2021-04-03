@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 
 const website = true;
 const mobile = true;
-const pc = true
+const pc = true;
 const works = [
   {
     name: "Hera",
@@ -100,7 +100,12 @@ const ShowcaseDiv = styled.main`
 `;
 
 const Showcase = () => (
-  <Layout active="showcase">
+  <Layout
+    active="showcase"
+    title="Ade Adeola - Showcase"
+    canonical="/showcase"
+    description="Some of my personal projects"
+  >
     <h2 style={{ color: "white" }}>These are some of my projects</h2>
     <ShowcaseDiv>
       {works.map((item, idx) => (
