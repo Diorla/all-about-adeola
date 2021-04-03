@@ -24,7 +24,7 @@ const Subtitle = styled.span`
   font-size: 15px;
 `;
 
-export default ({ resources }: { resources: Link[] }) => {
+const Resources = ({ resources }: { resources: Link[] }) => {
   const [search, setSearch] = useState("");
   return (
     <Layout active="resources">
@@ -155,3 +155,5 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   };
 };
+
+export default Resources;

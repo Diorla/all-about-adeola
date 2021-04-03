@@ -98,7 +98,8 @@ const ShowcaseDiv = styled.main`
   justify-content: space-around;
   flex-wrap: wrap;
 `;
-export default () => (
+
+const Showcase = () => (
   <Layout active="showcase">
     <h2 style={{ color: "white" }}>These are some of my projects</h2>
     <ShowcaseDiv>
@@ -123,3 +124,5 @@ export default () => (
     `}</style>
   </Layout>
 );
+
+export default Showcase;

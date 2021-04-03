@@ -144,7 +144,7 @@ body {
 a {
   color: #0070f3;
   text-decoration: none;
-  cursor: url("../public/cursor/pointer.svg"), text;
+  cursor: url("../public/cursor/pointer.svg"), pointer;
 }
 
 a:hover {
