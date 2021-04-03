@@ -21,7 +21,7 @@ export default function Footer() {
     <Wrapper>
       <div>Ade Adeola &copy; {new Date().getFullYear()}</div>
       <div>
-        Made with <span style={{ color: "crimson" }}>❤</span> and React, Hosted
+        Made with <span style={{ color: "#ef9a9a" }}>❤</span> and React, Hosted
         on Vercel
       </div>
     </Wrapper>

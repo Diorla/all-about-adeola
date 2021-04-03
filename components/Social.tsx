@@ -5,6 +5,7 @@ import {
   FaMedium,
   FaTwitter,
 } from "react-icons/fa";
+import { GiLinkedRings } from "react-icons/gi";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -38,37 +39,22 @@ const Wrapper = styled.div`
   & .codepen {
     color: #ae63e4;
   }
+  & .components {
+    color: brown;
+  }
 `;
 
 export default function Social() {
   return (
     <Wrapper>
       <a
-        href="https://medium.com/@adedotster/"
+        href="https://components.adeolaade.com/"
         target="_blank"
         rel="noreferrer"
-        className="medium"
-        title="blogs"
+        className="components"
+        title="web components"
       >
-        <FaMedium />
-      </a>
-      <a
-        href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fwww.adeolaade.com%2Fabout%2F&ref_src=twsrc%5Etfw&region=follow_link&screen_name=dihorla&tw_p=followbutton/"
-        target="_blank"
-        rel="noreferrer"
-        className="twitter"
-        title="follow me"
-      >
-        <FaTwitter />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/ade-adeola/"
-        target="_blank"
-        rel="noreferrer"
-        className="linkedin"
-        title="linkedin"
-      >
-        <FaLinkedin />
+        <GiLinkedRings />
       </a>
       <a
         href="https://www.github.com/Diorla/"
@@ -87,6 +73,33 @@ export default function Social() {
         title="ui collections"
       >
         <FaCodepen />
+      </a>
+      <a
+        href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fwww.adeolaade.com%2Fabout%2F&ref_src=twsrc%5Etfw&region=follow_link&screen_name=dihorla&tw_p=followbutton/"
+        target="_blank"
+        rel="noreferrer"
+        className="twitter"
+        title="follow me"
+      >
+        <FaTwitter />
+      </a>
+      <a
+        href="https://medium.com/@adedotster/"
+        target="_blank"
+        rel="noreferrer"
+        className="medium"
+        title="blogs"
+      >
+        <FaMedium />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/ade-adeola/"
+        target="_blank"
+        rel="noreferrer"
+        className="linkedin"
+        title="linkedin"
+      >
+        <FaLinkedin />
       </a>
     </Wrapper>
   );

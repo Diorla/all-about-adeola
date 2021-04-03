@@ -43,10 +43,7 @@ export default function Container({ active }: { active: string }) {
         <Section>
           <Contact />
           <Social />
-          <Link
-            href="https://components.adeolaade.com"
-            title="Web components"
-          />
+          <Link href="/sitemap" title="Sitemap" />
         </Section>
       </Main>
     </FadeIn>

@@ -72,7 +72,7 @@ const works = [
   },
   {
     name: "Digit-all",
-    link: "https://dribbble.com/shots/14616342-mortgage-calculator",
+    link: "https://codepen.io/Diorla/pen/yEMvgv",
     img: "images/digit-all.jpeg",
     description: "All your electronics here",
     website,
